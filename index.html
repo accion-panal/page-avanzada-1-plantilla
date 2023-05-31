@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	<script src="https://kit.fontawesome.com/e280fd1d3f.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+	<title>avanzada 1</title>
+</head>
+<body>
+ 
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+
+<!-----------------------------------Navegador---------------------------------------->
+
+	<nav class="site-nav ">
+		<div class="container ">
+			<div class="menu-bg-wrap">
+				<div class="site-navigation">
+					<a href="index.html" class="logo m-0 float-start">LOGO</a>
+
+					<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+						<li class=""><a href="#id_nosotros">NOSOTROS</a></li>
+						<li class="">
+							<a href="properties.html">PROPIEDADES</a>
+						</li>
+						<li><a href="services.html">SERVICIOS</a></li>
+						<li><a href="contact.html">CONTACTO</a></li>
+						<li><a href="">PÚBLICA GRATIS</a></li>
+						<li><a href="intranet.html">INTRANET</a></li>
+
+					</ul>
+
+					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+						<span></span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	
+<!-------------------------------slider con buscardor y 3imagenes------------------>
+	<div class="hero">
+
+
+		<div class="hero-slide">
+			<div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
+			<div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
+			<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
+		</div>
+
+
+		<div class="container ">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-9 text-center">
+					<h1 class="heading" data-aos="fade-up" style="font-size: 50px;">ENCUENTRA TU PROPIEDAD</h1>
+					<form action="#" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+						<input type="text" class="form-control px-4 " style="background-color: white;" placeholder="Busca por tipo de propiedad">
+						<button type="submit" class="btn btn-primary" style="background-color: #333;">Buscar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="text-center " style="margin-top: -55px;">
+						<div class="circular--landscape">
+							<img src="images/hero_bg_1.jpg" />
+						</div>
+						<div class="circular--landscape">
+							<img src="images/hero_bg_2.jpg" />
+						</div>
+						<div class="circular--landscape">
+							<img src="images/hero_bg_3.jpg" />
+						</div>
+	
+					</div>
+
+				</div>
+			</div>
+	</div>
+
+
+<!--                                       Filtro      style=" box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;"-->
+
+	<div class="section" style="padding-bottom: 0;">
+		<div class="container  p-lg-5 " style="padding-top: 0 !important;padding-bottom: 0 !important;box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;">
+			<div class="row m-lg-5 " >
+				<div class="col-lg-2 text-center p-2" >
+					<div class="section p-5 mt-4 " style="border-right: 1px solid black;" id="operationType">
+						<div class="form-check mb-4">
+							<input class="form-check-input " type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" id="operationType-venta" value="venta">
+							<label class="form-check-label " for="flexRadioDefault1">
+							Venta
+							</label>
+						</div>
+						<div class="form-check mb-4">
+							<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2"  id="operationType-arriendo" value="arriendo">
+							<label class="form-check-label" for="flexRadioDefault2">
+							Arriendo
+							</label>
+						</div>
+						<div class="form-check mb-4">
+							<input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3"  id="operationType-arriendo-temp" value="arriendo_temporal">
+							<label class="form-check-label" for="flexRadioDefault3">
+							Arriendo temporal
+							</label>
+						</div>
+					</div>
+	  			</div>
+				<div class="col-lg-8 ">
+
+					<div class="row p-5 text-center ">
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="typeOfProperty" aria-label="Default select example">
+								<option value="" selected>Tipo inmueble</option>
+								<option value="casa">Casa</option>
+								<option value="bodega">Bodega</option>
+								<option value="departamento">Departamento</option>
+								<option value="estacionamientos">Estacionamiento</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="region" aria-label="Default select example">
+								<option value="0" selected>Region</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select  bornone" id="commune" aria-label="Default select example">
+								<option value="" selected>Comuna</option>	
+							</select>
+						</div>
+
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="bedrooms" aria-label="Default select example">
+								<option value="" selected>Habitaciones</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="covered_parking_lots" aria-label="Default select example">
+								<option value="" selected>Estacionamientos</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="bathrooms" aria-label="Default select example">
+								<option value="" selected>Baños</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+
+						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+							<div class="row text-start  p-2">
+								<div class="col-6 " style="padding-left: 1rem;">
+									<div class="row bornone" style="margin-right: 5px;">
+										<div class="col-12">
+											Precio
+										</div>
+									</div>
+
+								</div>
+								<div class="col-6">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<label class="form-check-label" for="inlineRadio1">UF</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<label class="form-check-label" for="inlineRadio2">CLP</label>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+							<div class="row text-start">
+								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
+									<div class="row bornone" style="margin-right: 5px;" >
+										<div class="col-6">
+											<input type="number" class=" text-start" style="width: 100px;border: none;" min="0" pattern="^[0-9]+" name="desde" id="min_price" placeholder="Desde">
+										</div>
+									</div>
+								
+								</div>
+								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
+									<div class="row bornone" style="margin-right: 5px;" >
+										<div class="col-6">
+											<input type="number" class="text-center" style="width: 100px;border: none" min="0" pattern="^[0-9]+" name="hasta" id="max_price" placeholder="Hasta">	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	  			</div>
+				<div class="col-lg-2 text-center p-lg-5 pt-5 boton-media" >
+					<button type="submit" class="btn btn-rounded btn-circle" id="buscar" style="background-color:#000;color:#fff;">
+						Buscar
+					</button>
+					<!-- <p><a href="properties.html" target="_blank" class="btn btn-primary text-white py-3 px-4 "  style="background-color: #333;">Buscar</a></p> -->
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+<!--                                   Propiedades destacadas                             -->
+
+<div class="section section-properties">
+	<div class="container">
+		<div class="row mb-5 align-items-center">
+			<div class="col-lg-12">
+				<h2 class="font-weight-bold heading p-4" style="border-left: 2px solid black; margin-left: 15%;font-weight: bold; ">PROPIEDADES DESTACADAS </h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<section class="splide" aria-label="Splide Basic HTML Example">
+					<div class="splide__track">
+					  <ul class="splide__list" id="container-prop-destacada">
+						<!-- <li class="splide__slide">Slide 01</li> -->
+					   
+					  </ul>
+					</div>
+				  </section>
+						<!-- <div class="property-item mb-30">
+							<div class="border" style="background-image: url('images/img_1.jpg')">
+								<div class="shadow-properties m-3">
+									<a href="property-single.html" class="img">
+										<div class="property-content text-center" >
+											<div class="card-body">
+												<p class=" "> <i class="fa fa-map-marker fa-lg  p-1"></i> Puerto Montt</p>
+												<h3 class="card-title" style="font-weight: bold;">TERRAMAR</h3>
+												<hr width="100%" size="5"  ></hr>
+												<div class="row">
+												  <div class="col-4">
+													  <div class="row">
+														  <div class="col-12"><h5>Hab</h5></div>
+														  <div class="col-12">3</div>
+													  </div>
+												  </div>
+												  <div class="col-4">
+													  <div class="row">
+														  <div class="col-12"><h5>UF</h5></div>
+														  <div class="col-12">3650</div>
+													  </div>
+												  </div>
+												  <div class="col-4">
+													  <div class="row">
+														  <div class="col-12"><h5>M2</h5></div>
+														  <div class="col-12">77</div>
+													  </div>
+												  </div>
+												</div>
+											  </div>
+										</div>
+									</a>
+								</div>
+							</div>
+
+						</div>  -->
+				
+					<!-- <div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">
+						<span class="prev" data-controls="prev" aria-controls="property" tabindex="-1" >Antes</span>
+						<span class="next" data-controls="next" aria-controls="property" tabindex="-1" >Siguiente</span>
+					</div> -->
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<!------------------------------------------------Nosotros-------------------------------->
+	<section class="features-1 " id="id_nosotros"><!-- style="padding-left:100px ;padding-right: 100px;" -->
+
+		<div class="row mb-5 ">
+			<div class="col-lg-12 text-start">
+				<h2 class="font-weight-bold heading p-4" style="border-left: 2px solid black;font-weight: bold; margin-left: 15%;">NOSOTROS</h2>
+			</div>
+
+		</div>
+
+		<div class="container p-lg-5" style="padding-bottom: 0!important;padding-top: 0!important;">
+			<div class="row " style="text-align: left;padding-left: 5%;padding-right: 5%;">
+				<div class="col-6 col-xl-3"  data-aos="fade-up" data-aos-delay="300">
+					<div class="row">
+						<div class="col-12">
+							<h4>Mision</h4>
+						</div>
+						<div class="col-12">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+								Omnis officiis adipisci ullam similique unde voluptates 
+								rerum sed eligendi, qui itaque laboriosam nihil asperiores? 
+								Voluptate maiores error eius assumenda distinctio esse.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-xl-3"  data-aos="fade-up" data-aos-delay="500">
+					<div class="row">
+						<div class="col-12">
+							<h4>Vision</h4>
+						</div>
+						<div class="col-12">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+								Omnis officiis adipisci ullam similique unde voluptates 
+								rerum sed eligendi, qui itaque laboriosam nihil asperiores? 
+								Voluptate maiores error eius assumenda distinctio esse.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-xl-6">
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+						Quae nostrum delectus nesciunt reprehenderit consequuntur 
+						labore, a ratione velit, sint mollitia quo ducimus fugit 
+						nulla animi praesentium placeat dolorum natus architecto?
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+						Quae nostrum delectus nesciunt reprehenderit consequuntur 
+						labore, a ratione velit, sint mollitia quo ducimus fugit 
+						nulla animi praesentium placeat dolorum natus architecto?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Omnis officiis adipisci ullam similique unde voluptates 
+						rerum sed eligendi, qui itaque laboriosam nihil asperiores? 
+
+					</p>
+				</div>
+			</div>
+			<div class="row p-5 ">
+				<div class="col-12 col-xl-8 " >
+					<div class=""style="overflow: hidden;  box-shadow: 0px 0px 10px 4px rgba(131,131,131,0.98);">
+						<img src="images/nosotros.jpg" style="  object-fit: cover; width: 100%;" alt="">
+					</div>
+				</div>
+
+				<div class="col-12 col-xl-4 p-0   " style="font-size: 20px">
+					<div class="row text-center " style="height: 100%;">
+						<div class="col-12 p-3">
+							<div class="row section-counter ">
+									<div class="counter-wrap mb-5 mb-lg-0" id="count-total-prop">
+										<span class="number"><span class="countup" style="font-weight: bold;font-size: 50px; color: #999999;">31</span></span>
+										<span class="caption text-black-50">Total de Propiedades</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-12 p-3">
+							
+							<div class="row section-counter ">
+								<div class="counter-wrap mb-5 mb-lg-0" id="count-sale-prop">
+									<span class="number"><span class="countup" style="font-weight: bold;font-size: 50px; color: #999999;">298</span></span>
+									<span class="caption text-black-50">Propiedades vendidas</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 p-3">
+
+							<div class="row section-counter ">
+								<div class="counter-wrap mb-5 mb-lg-0" id="count-lease-prop">
+									<span class="number"><span class="countup" style="font-weight: bold;font-size: 50px; color: #999999;">181</span></span>
+									<span class="caption text-black-50">Propiedades Arrendadas</span>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!---------------------Footer--------------------------->
+
+<div class="site-footer" ><!--style="background-color:#3c3b3b ;"-->
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-3">
+					<div class="widget">
+						<h3 class="p-1 pt-2">Contacto</h3>
+						<div class="row pt-2">
+							<div class="col-12">
+								<p class="">
+									<i class="fa fa-map-marker fa-lg  p-1"></i>
+									RentalProp Spa Apoquindo 
+									6410 Of.605, Las condes
+								</p>
+							</div>
+							<div class="col-12">
+								<p class="">
+									<i class="fa fa-phone fa-lg  p-1"></i>
+									+56 9 5046 9097
+								</p>
+							</div>
+							<div class="col-12">
+								<p class="">
+									<i class="fa fa-envelope fa-lg  p-1"></i>
+									Contacto@rentalprop.cl
+								</p>
+							</div>
+						</div>
+					</div> <!-- /.widget -->
+
+
+			</div> <!-- /.col-lg-4 -->
+			<div class="col-lg-3">
+				<div class="widget">
+					<ul class="list-unstyled float-start links p-2">
+						<h3 class="p-1">Menú</h3>
+						<li style="text-decoration: none;"><a class="p-1" href="about.html">NOSOTROS</a></li>
+						<li style="text-decoration: none;"><a class="p-1" href="properties.html">PROPIEDADES</a></li>
+						<li style="text-decoration: none;"><a class="p-1" href="services.html">SERVICIOS</a></li>
+						<li style="text-decoration: none;"><a class="p-1" href="">PUBLICA GRATIS</a></li>
+						<li style="text-decoration: none;"><a class="p-1" href="intranet.html">INTRANET</a></li>
+
+					</ul>
+				</div> <!-- /.widget -->
+			</div>
+			<div class="col-lg-3 pt-2">
+				<h3 style="font-size: 20px;
+				font-weight: 700;
+				text-transform: uppercase;">Descubre</h3>
+				<ul class="list-unstyled social  ">
+					<li><a href="#"><span class="icon-facebook  text-white"></span></a></li>
+					<li><a href="#"><span class="icon-instagram text-white"></span></a></li>
+					<li><a href="#"><span class="icon-twitter   text-white"></span></a></li>
+					<li><a href="#"><span class="icon-linkedin  text-white"></span></a></li>
+
+				</ul>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget ">
+
+									<!-- LOGO -->
+					<h1 class="heading" data-aos="fade-up" style="font-size: 80px; font-weight: bold;">LOGO</h1>
+
+				</div> <!-- /.widget -->
+			</div> <!-- /.col-lg-4 -->
+		</div> <!-- /.row -->
+		<hr width="100%" size="5"  ></hr>
+
+		<div class="row ">
+			<div class="col-12 mt-2" style="text-align: right;">
+
+				<p> &copy;<script>;</script> 
+				TODOS LOS DERECHOS RESERVADOS.  
+				</p>
+
+			</div>
+
+	</div>
+  </div> <!-- /.container -->
+</div> <!-- /.site-footer -->
+
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+    	<div class="spinner-border" role="status">
+    		<span class="visually-hidden">Loading...</span>
+    	</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script type="module" src="js/prop_destacada.js"></script>
+	<script type="module" src="js/count-cant-prop.js"></script>
+	<script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
+	<script type="module" src="js/utils/filterOnSubmit.js"></script>
+	<script type="module" src="js/utils/getSelects.js"></script>
+
+
+
+
+  </body>
+  </html>
