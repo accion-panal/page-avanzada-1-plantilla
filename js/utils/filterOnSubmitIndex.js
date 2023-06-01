@@ -24,7 +24,18 @@ for (let p of aux) {
 }
 
 
-document.getElementById("operationType").addEventListener('click', function(){
+let valorRadioSelect = '';
+document.getElementById('flexRadioDefault1').addEventListener('change', mostrarValor);
+document.getElementById('flexRadioDefault2').addEventListener('change', mostrarValor);
+document.getElementById('flexRadioDefault3').addEventListener('change', mostrarValor);
+function mostrarValor(event) {
+  valorRadioSelect = event.target.value;
+  console.log(valorRadioSelect);
+}
+
+
+
+/* document.getElementById("operationType").addEventListener('click', function(){
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let valores = [];
     checkboxes.forEach(function(checkbox){
@@ -38,7 +49,7 @@ document.getElementById("operationType").addEventListener('click', function(){
 
     console.log(valores)
 
-})
+}) */
 
 // if(document.getElementById("operationType-sale").checked){
 //     checkOperationType.value = query.operationType;
