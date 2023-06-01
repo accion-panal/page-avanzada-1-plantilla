@@ -20,12 +20,16 @@
 	<link rel="stylesheet" href="css/tiny-slider.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
 		
 	<script src="https://kit.fontawesome.com/5694cf4c5b.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	
 	<script src="https://kit.fontawesome.com/e280fd1d3f.js" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 	<title>avanzada 1</title>
 </head>
 <body>
@@ -75,43 +79,46 @@
 
 	<div class="section">
 		<div class="container">
+			<!-- General Info -->
 			<div class="row  align-items-center p-5"  style="margin-left: 5%;margin-right: 5%; margin-bottom: 0;">
 				<div class="col-lg-8  ">
 					<div class="row ">
-						<div class="col-12 bord-venta m-lg-4">
-							<h4 class="heading " style="font-weight: bold;" >Venta</h4>
-							<h1 class="heading " style="font-weight: bold; color: #4D4D4D;">Terramar, Lorem insup</h1>
-							<p>REF:123456</p>
-							
+						<div class="col-12 bord-venta m-lg-4" id="main-info-prop">
+							<!-- <h4 class="heading " style="font-weight: bold;" >Venta</h4> -->
+							<h1 class="heading " style="font-weight: bold; color: #4D4D4D;">Buscando propiedad...</h1>
+							<!-- <p>REF:123456</p> -->
 						</div>
 					</div>
-					<p>
-						<i class="fa fa-map-marker "  aria-hidden="true"></i>
-						PUERTO MONTT #2345, LOREM INSUM DOLOR SIT AMET
+					<p id="direction-info-prop">
+						<!-- <i class="fa fa-map-marker "  aria-hidden="true"></i>
+						PUERTO MONTT #2345, LOREM INSUM DOLOR SIT AMET -->
 					</p>
 				</div>
-				<div class="col-lg-4 text-end p-1">
-					<b>
-						<h1 class="heading " style="font-weight: bold; color: #4D4D4D;">UF 3.600</h1>
-
-					</b>
-					<h5 class="heading "> CLP   $123.200.000</h5>
+				<div class="col-lg-4 text-end p-1" id="price-info-prop">
+					<!-- <b><h1 class="heading " style="font-weight: bold; color: #4D4D4D;">UF 3.600</h1></b>
+					<h5 class="heading "> CLP   $123.200.000</h5> -->
 				</div>
-		
 			</div>
-
+			<!-- Image -->
 			<div class="row " style="margin-left: 5%;margin-right: 5%; margin-bottom: 0;">
 				<div class="col-12 " style=" border-radius:15px ;   box-shadow: 0px 0px 14px 4px #828282;">
 					<div class="row " style="overflow:hidden ;" >
-
 						<div class="hero ">
-			
-							<div class="hero-slide">
+							<!--<div class="hero-slide">
 								<div class="img overlay" style="background-image: url('images/hero_bg_3.jpg')"></div>
 								<div class="img overlay" style="background-image: url('images/hero_bg_2.jpg')"></div>
 								<div class="img overlay" style="background-image: url('images/hero_bg_1.jpg')"></div>
-							</div>
-					
+							</div> -->
+							<section class="splide" aria-label="Splide Basic HTML Example">
+								<div class="splide__track">
+								  <ul class="splide__list" id="carrucel-img">
+									<li class="splide__slide">Slide 01</li>
+									<li class="splide__slide">Slide 02</li>
+									<li class="splide__slide">Slide 03</li>
+								   
+								  </ul>
+								</div>
+							</section>
 						</div>
 			
 			
@@ -141,9 +148,10 @@
 
 			</div>
 
+			<!-- Caracteristicas -->
 			<div class="row " style="margin-left: 5%;margin-right: 5%; margin-bottom: 0;">
 
-				<div class="col-12 col-xl-8 pt-5" >
+				<div class="col-12 col-xl-8 pt-5" id="description-info-prop">
 					<h3 class="text-center" style="font-size: 35px; font-weight:bold ;">CARACTERÍSTICAS</h3>
 
 
@@ -151,7 +159,7 @@
 						<div class="col-3">
 							<div class="row " style="font-size: 40px;">
 								<div class="col-12">
-									05
+									00
 								</div>
 								<div class="col-12">
 									<i class="fa fa-bed  "  aria-hidden="true"></i>
@@ -161,30 +169,33 @@
 						<div class="col-3">
 							<div class="row " style="font-size: 40px;">
 								<div class="col-12">
-									02
+									00
 								</div>
 								<div class="col-12">
 									<i class="fa fa-bath "  aria-hidden="true"></i>
 								</div>
-							</div>						</div>
+							</div>						
+						</div>
 						<div class="col-3">
 							<div class="row " style="font-size: 40px;">
 								<div class="col-12">
-									01
+									00
 								</div>
 								<div class="col-12">
 									<i class="fa fa-car "  aria-hidden="true"></i>
 								</div>
-							</div>						</div>
+							</div>						
+						</div>
 						<div class="col-3">
 							<div class="row " style="font-size: 40px;">
 								<div class="col-12">
-									90
+									00
 								</div>
 								<div class="col-12">
 									<i class="fa fa-ruler "></i>
 								</div>
-							</div>						</div>
+							</div>						
+						</div>
 
 					</div>
 
@@ -192,29 +203,14 @@
 					<div class="m-3 pt-3 bord-venta p-3">
 						<h2 style="font-size: 35px; font-weight:bold ;">Descripción</h2>
 						<p class="text-black-50" style="font-size:20px ;">
-							
-							Edificios Nogales del Golf, contempla 4 edificios de 3 pisos, 
-							con vista a la cancha de golf del Club de Golf La Dehesa. Emplazados 
-							en un parque de 8.000 m2 de áreas verdes, cuentan con un club house con 
-							piscina, salón gourmet y gimnasio.
-
+							Descripción
 						</p>
 					</div>
 					<br><br><br>
 					<div class="m-3 pt-3 bord-venta p-3">
 						<h2 style="font-size: 35px; font-weight:bold ;">Características Generales</h2>
 						<p class="text-black-50" style="font-size:20px ;">
-							
-							Ascensor con acceso directo a pallier exclusivo. 
-							Terrazas con barandas de cristal Puertas enchapadas en 
-							madera. Piso de ingeniería Ventanas termopanel PVC folio 
-							madera. Calefacción por piso radiante Muebles de cocina italianos. 
-							Cocina con mesón isla y con espacio para comedor de diario. 
-							equipada con encimera vitrocerámica, campana, lavavajillas, 
-							horno y microondas empotrado Miele Cubiertas de cuarzo Silestone 
-							en cocina Grifería Hansgrohe Tina hidromasaje.
-						
-						
+							Características
 						</p>
 					</div>
 
@@ -292,16 +288,16 @@
 		<div class="container" style="margin-left: 5%;margin-right: 5%; margin-bottom: 0;" >
 			<div class="m-3 pt-3 bord-venta p-3">
 				<h2 style="font-weight: bold;">UBICACIÓN DE LA PROPIEDAD</h2>
-				<p class="text-black-50" style="font-size:20px ;">
+				<p class="text-black-50" style="font-size:20px ;" id="direction-map-prop">
 					<i class="fa fa-map-marker "  aria-hidden="true"></i>
 					PUERTO MONTT #2345, LOREM INSUM DOLOR SIT AMET
-
 				</p>
 			</div>
-			<iframe class="mapgoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5958879815885!2d-70.56693998897713!3d-33.40770567329557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc2ce4e1739%3A0x8f2bfdc565cf902f!2sAv.%20Apoquindo%206410%2C%207550000%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1668719016513!5m2!1sen!2scl" 
+			<!-- <iframe class="mapgoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5958879815885!2d-70.56693998897713!3d-33.40770567329557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc2ce4e1739%3A0x8f2bfdc565cf902f!2sAv.%20Apoquindo%206410%2C%207550000%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1668719016513!5m2!1sen!2scl" 
 			 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		
-
+ -->		<div class="col-md-12 col-lg-12 wow fadeInUp p-5 pt-2" data-wow-delay="0.1s">
+				<div id="map"></div>
+			</div>
 		</div>	
 	</section>
 
@@ -403,12 +399,17 @@
     	</div>
     </div>
 
-
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+	<!-- Detalle -->
+	<script type="module" src="js/prop_detalle.js"></script>
+	<script type="module" src="js/prop_detalleMap.js"></script>
+	<!-- Splide -->
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
   </html>
