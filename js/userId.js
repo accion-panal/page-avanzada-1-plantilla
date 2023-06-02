@@ -5,3 +5,4 @@ export const RealtorSendEmailData = {
     detail: 'nicolascabreramillacan@gmail.com',     /* SendEmailDetail.js */
     public: 'nicolascabreramillacan@gmail.com',     /* SendEmailPublic.js */
 };
+
