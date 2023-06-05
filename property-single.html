@@ -247,28 +247,28 @@
 							<hr width="100%" size="4" style="color: #000;">
 						</div>
 
-						<form action="#" class="text-center">
+						<form class="text-center" method="POST" id="form-realtor" name="FormSubmit">
 							<h3 class="mt-3 text-center ">Contáctar al vendedor
 							</h3>
 							<div class="row  m-lg-4">
 								<div class="col-12 mb-3 text-center">
-									<input type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Nombre ">
-								</div>
-
-								<div class="col-12 mb-3 text-center">
-									<input type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Telefono">
+									<input id="nameDetail" type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Nombre ">
 								</div>
 								<div class="col-12 mb-3 text-center">
-									<input type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Email">
+									<input id="phoneDetail" type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Telefono">
 								</div>
 								<div class="col-12 mb-3 text-center">
-									<textarea name="" id="" cols="30" rows="3" class="form-control text-center" style="border-radius: 20px ; background-color: white;border: 2px solid black!important;" placeholder="Mensaje"></textarea>
+									<input id="emailDetail" type="text" class="form-control text-center" style="border-radius: 50px ;  background-color: white;" placeholder="Email">
 								</div>
-
-		
+								<div class="col-12 mb-3 text-center">
+									<textarea id="messageDetail" cols="30" rows="3" class="form-control text-center" style="border-radius: 20px ; background-color: white;border: 2px solid black!important;" placeholder="Mensaje"></textarea>
+								</div>
 								<div class="col-12 text-center " style="padding: 20px; font-size: 80%;">
 									<input type="submit" value="Enviar" class="" style="border-radius: 50px;width: 100%;padding: 5px;background-color: #333; color: white;">
 								</div>
+								<!-- <div class="alert alert-success" role="alert">
+									This is a success alert—check it out!
+								</div> -->
 
 
 							</div>
@@ -409,6 +409,7 @@
 	<!-- Detalle -->
 	<script type="module" src="js/prop_detalle.js"></script>
 	<script type="module" src="js/prop_detalleMap.js"></script>
+	<script type="module" src="js/utils/SendEmailDetail.js"></script>
 	<!-- Splide -->
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
