@@ -4,7 +4,7 @@ import	ExchangeRateServices from  "../services/ExchangeRateServices.js";
 import {parseToCLPCurrency, clpToUf} from "../utils/getExchangeRate.js"
 
 export default async function apiDestCall() {
-    let {data} = await getProperties(1,10,0,1,1);
+    let {data} = await getProperties(1, 10, 0, 1, 1, 0);
     let filtrado = data.filter(data => data.highlighted != null && data.highlighted  != false );
 
     const response = await ExchangeRateServices.getExchangeRateUF();

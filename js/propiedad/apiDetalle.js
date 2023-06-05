@@ -2,7 +2,7 @@ import { getPropertiesForId } from "../services/PropertiesServices.js";
 import ExchangeRateServices from "../services/ExchangeRateServices.js";
 import { parseToCLPCurrency, clpToUf } from '../utils/getExchangeRate.js';
 
-export default async function apiDetalleCall(id, statusId, companyId) {
+export default async function apiDetalleCall(id, statusId = 1, companyId) {
 
     let { data } = await getPropertiesForId(id, statusId, companyId);
     const response = await ExchangeRateServices.getExchangeRateUF();
@@ -116,4 +116,3 @@ export default async function apiDetalleCall(id, statusId, companyId) {
     /* CONTACTO */
 }
 
-apiDetalleCall()

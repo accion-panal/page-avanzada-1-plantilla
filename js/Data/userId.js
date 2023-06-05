@@ -1,4 +1,5 @@
-export const UserData = {statusId: 1,companyId: 1};
+export const PropertyData = {CodigoUsuarioMaestro: 0, companyId: 1, realtorId:0};
+
 
 export const RealtorSendEmailData = {
     sendEmail: 'nicolascabreramillacan@gmail.com',  /* SendEmail.js */

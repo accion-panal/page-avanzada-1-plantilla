@@ -1,8 +1,8 @@
 import apiDetalleCall from "./propiedad/apiDetalle.js";
-import { UserData } from "./userId.js";
+import { PropertyData } from "./Data/userId.js";
 
 const url = window.location.search; 
 const value = url.match(/\d+/)[0];
-const {statusId,companyId} = UserData;
+const {companyId} = PropertyData;
 
-apiDetalleCall(value,statusId,companyId);
+apiDetalleCall(value, 1, companyId);

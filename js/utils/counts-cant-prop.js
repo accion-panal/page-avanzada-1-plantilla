@@ -1,7 +1,7 @@
 import { getProperties } from "../services/PropertiesServices.js";
 
 export default async function countProp() {
-  const response = await getProperties(1, 10, 0, 1, 1);
+  const response = await getProperties(1, 10, 0, 1, 1, 0);
   const data = response.data;
 
   document.getElementById("count-total-prop").innerHTML = `<span class="number"><span class="countup" style="font-weight: bold;font-size: 50px; color: #999999;">${response.meta.totalItems}</span>

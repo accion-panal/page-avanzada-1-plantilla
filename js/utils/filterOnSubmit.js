@@ -59,8 +59,6 @@ const onFormSubmit = (
 // document.getElementById('operationType').addEventListener('change',(element) =>{
 //     console.log(element.target.value)
 //     query.operationType = element.target.value;
-
-    
 //  })
  document.getElementById('typeOfProperty').addEventListener('change' ,(element) => {
     query.typeOfProperty =  element.target.value;
@@ -109,7 +107,7 @@ document.getElementById("covered_parking_lots").addEventListener( "change", (ele
 document.getElementById("buscar")?.addEventListener("click", async () => {
 	window.open(
 		window.location.origin +
-			`/properties.html?page=${query.page}&limit=${query.limit}&realtorId=${query.realtorId}&statusId=${query.statusId}&operationType=${query.operationType}&typeOfProperty=${query.typeOfProperty}&region=${query.region}&commune=${query.commune}&min_price=${query.min_price}&max_price=${query.max_price}&covered_parking_lots=${query.covered_parking_lots}&bathrooms=${query.bathrooms}&surface_m2=${query.surface_m2}&bedrooms=${query.bedrooms}`
+			`/properties.html?page=${query.page}&limit=${query.limit}&CodigoUsuarioMaestro=${query.CodigoUsuarioMaestro}&realtorId=${query.realtorId}&statusId=${query.statusId}&operationType=${query.operationType}&typeOfProperty=${query.typeOfProperty}&region=${query.region}&commune=${query.commune}&min_price=${query.min_price}&max_price=${query.max_price}&covered_parking_lots=${query.covered_parking_lots}&bathrooms=${query.bathrooms}&surface_m2=${query.surface_m2}&bedrooms=${query.bedrooms}`
 	);
 });
 

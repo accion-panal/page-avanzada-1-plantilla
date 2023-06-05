@@ -1,18 +1,18 @@
 import api from "./AuthencationServices.js"
 
-export const getProperties = async(page, limit, realtorId, statusId , companyId) => {
-  let {data} = await api.get(`properties?page=${page}&limit=${limit}&realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}`);
+export const getProperties = async(page, limit, CodigoUsuarioMaestro, statusId, companyId, realtorId) => {
+  let {data} = await api.get(`properties?page=${page}&limit=${limit}&CodigoUsuarioMaestro=${CodigoUsuarioMaestro}&realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}`);
   return data;
 }
 
 
-export const getPropertiesForId = async( id ,  statusId, companyId) => {
+export const getPropertiesForId = async( id,  statusId, companyId) => {
   let data = await api.get(`properties/${id}?&statusId=${statusId}&companyId=${companyId}`);
   return data;
 }
 
 
-export const getPropertiesOnForm = async(statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price=0, bathrooms=0, bedrooms=0,covered_parking_lots=0) => {
+export const getPropertiesOnForm = async( statusId = 1, companyId=1, operationType="", typeOfProperty="", region="", commune="", min_price=0, max_price=0, bathrooms=0, bedrooms=0,covered_parking_lots=0) => {
 const _statusId = `${statusId}`;
 const _companyId = `${companyId}`;
 const _operationType = operationType?.length > 0 ? operationType : false;
