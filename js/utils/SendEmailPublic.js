@@ -4,7 +4,6 @@ const formEmail = document.getElementById('form-contact');
 formEmail.addEventListener('submit', function (e) {
     e.preventDefault();
     let realtorMail = RealtorSendEmailData.public;
-    let alertElement = document.querySelector('.alert');
 
     let firstName = document.getElementById('namePublic');
     let email = document.getElementById('emailPublic');
@@ -16,9 +15,6 @@ formEmail.addEventListener('submit', function (e) {
 
     if(selectOperation.value==='0'|| selectProperty.value==='0' || selectRegion.value==='0' ||
        firstName.value==='' || email.value==='' || phone.value===''){
-        alertElement.textContent = 'Todos los campos son obligatorios';
-        alertElement.classList.add('alert-danger');
-        alertElement.classList.remove('visually-hidden');
         return;
     }
 
