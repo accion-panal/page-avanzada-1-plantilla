@@ -1,5 +1,17 @@
 
 :root {
+/* Colores variables */
+  --color-primary: #000000;
+  --color-secundary: #ffffff;
+  --color-info: #3d3d3d;
+  --color-success: #58fa00;
+
+  /* Colores variables opacity*/
+  --color-primary-opacity: #000000d5;
+  --color-secundary-opacity: #ffffffd5;
+  --color-info-opacity: #0093cdd5;
+  --color-success-opacity: #58fa00d5;
+
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -10403,9 +10415,11 @@ nav[aria-label="breadcrumb"] li:before {
 
 
 .tarjerta {
-
   box-shadow: 0px 0px 15px 5px #757575;
-
+  transition: all ease 0.2s;
+}
+.tarjerta:hover {
+  transform: translateY(-1rem) scale(1.03);
 }
 
 

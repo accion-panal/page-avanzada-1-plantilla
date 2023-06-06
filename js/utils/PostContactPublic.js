@@ -1,8 +1,8 @@
-import { UserData } from "../userId.js";
+import { PropertyData } from "../Data/userId.js";
 
 const form = document.getElementById('form-contact');
 
-let userCompanyId = UserData.companyId;
+let userCompanyId = PropertyData.companyId;
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
