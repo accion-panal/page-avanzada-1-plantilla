@@ -3,9 +3,11 @@ import { getProperties } from "../services/PropertiesServices.js";
 import ExchangeRateServices from "../services/ExchangeRateServices.js";
 
 import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
+import { PropertyData } from "../Data/userId.js";
 
 export default async function apiCallList() {
-  const response = await getProperties(1, 10, 0,0, 1, 1);
+  const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
+  const response = await getProperties(1, 10, CodigoUsuarioMaestro, 1, companyId, realtorId);
   const data = response.data;
 
   const buttons = document.getElementById("buttons");
