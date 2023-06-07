@@ -55,7 +55,15 @@ const onFormSubmit = (
   for (let p of aux) {
     query[`${p[0]}`] = p[1];
   }
-  
+
+  /* radio button - OperatyType */
+  document.getElementById('flexRadioDefault1').addEventListener('change', mostrarValor);
+  document.getElementById('flexRadioDefault2').addEventListener('change', mostrarValor);
+  document.getElementById('flexRadioDefault3').addEventListener('change', mostrarValor);
+  function mostrarValor(event) {
+    query.operationType = event.target.value;
+    console.log(query.operationType);
+  }
 // document.getElementById('operationType').addEventListener('change',(element) =>{
 //     console.log(element.target.value)
 //     query.operationType = element.target.value;

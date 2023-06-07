@@ -82,7 +82,7 @@
 				</div>
 	
 			</div>
-			<div class="row text-center rowservices" >
+			<div id="card-info" class="row text-center rowservices" >
 				<div class="col-12 col-md-6  col-xl-3"  data-aos="fade-up" data-aos-delay="300">
 					<a href="#">
 						<div class="box-feature tarjerta">
@@ -90,7 +90,7 @@
 							<h3 class="mb-3">PÚBLICA CON NOSOTROS</h3>
 							<p>
 
-								<a href="#publicagratis" class="text-black " href="#collapseExample2"  data-bs-toggle="collapse" aria-expanded="false" 
+								<a href="#publicagratis" class="btn-custom" href="#collapseExample2"  data-bs-toggle="collapse" aria-expanded="false" 
 								aria-controls="collapseExample2"  >Completar Formulario</a>
 							
 							</p>
@@ -102,7 +102,7 @@
 						<div class="box-feature tarjerta">
 							<img src="images/icono-04.svg"  width="70%" height="70%" alt="">
 							<h3 class="mb-3">ASESORÍA BANCARIA</h3>
-							<p><a href="#asesoriabancaria" class="text-black ">Ver más</a></p>
+							<p><a href="#asesoriabancaria" class="btn-custom">Ver más</a></p>
 						</div>
 					</a>
 				</div>
@@ -111,7 +111,7 @@
 						<div class="box-feature tarjerta">
 							<img src="images/icono-05.svg"  width="70%" height="70%" alt="">
 							<h3 class="mb-3">Servicios Legales</h3>
-							<p><a href="" class="text-black">Ver más</a></p>
+							<p><a href="" class="btn-custom">Ver más</a></p>
 						</div>
 					</a>
 				</div>
@@ -120,7 +120,7 @@
 						<div class="box-feature tarjerta">
 							<img src="images/icono-06.svg"  width="70%" height="70%" alt="">
 							<h3 class="mb-3">Administración de Arriendos</h3>
-							<p><a href="" class="text-black">Ver más</a></p>
+							<p><a href="" class="btn-custom">Ver más</a></p>
 						</div>
 					</a>
 				</div>
@@ -131,24 +131,19 @@
 
 				<div id="publicagratis" class="row p-5 collapse " id="collapseExample2" >
 
-					<div class="col-lg-6 mb-5 mb-lg-0 "  data-aos="fade-up" data-aos-delay="100">
+					<div id="left-form" class="col-lg-6 mb-5 mb-lg-0 "  data-aos="fade-up" data-aos-delay="100">
 						<img src="images/nosotros_2.jpg" alt="lemurs" class="bg-imagex" />
-		
 						<div class="contact-info  ctb p-2 ">
 							<div class="row pb-5 pt-5 " style="margin-left: 5%;margin-right: 5%;" >
 								<div class="col-12  p-2">
 									<h1 class="p-2"style="border-left: 2px solid black;">PÚBLICA CON NOSOTROS</h1>
-		
-
 								</div>
 							</div>
-
-		
 						</div>
 					</div>
 					<div class="col-lg-6  p-5 paddintop " style="background-color: #4d4d4d;" data-aos="fade-up" data-aos-delay="200">
 						<form method="POST" id="form-contact" name="FormSubmit">
-							<p class="text-white" style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis 
+							<p id="desc-form" class="text-white" style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis 
 								fugiat, tenetur eius rem, architecto esse perspiciatis aperiam 
 							</p>
 							<h2 class="p-lg-1  text-white">Formulario</h2>
@@ -193,15 +188,13 @@
 
 				<div id="asesoriabancaria" class="row p-0 p-sm-5 ">
 
-					<div class="col-lg-6 mb-5 mb-lg-0 "  data-aos="fade-up" data-aos-delay="100">
+					<div id="left-asesoria" class="col-lg-6 mb-5 mb-lg-0 "  data-aos="fade-up" data-aos-delay="100">
 						<img src="images/nosotros_2.jpg" alt="lemurs" class="bg-imagex" />
 		
 						<div class="contact-info  ctb p-2 ">
 							<div class="row pb-5 pt-5 " style="margin-left: 5%;margin-right: 5%;" >
 								<div class="col-12  p-2" style="width: 200px;">
 									<h1 class="p-2"style="border-left: 2px solid black;">ASESORÍA BANCARIA</h1>
-		
-
 								</div>
 							</div>
 
@@ -214,7 +207,7 @@
 					
 					<div class="col-lg-6  p-5 paddintop " style="background-color: #4d4d4d;" data-aos="fade-up" data-aos-delay="200">
 						<form action="#">
-							<p class="text-white" style="font-size: 20px;">
+							<p id="desc-asesoria" class="text-white" style="font-size: 20px;">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis 
 								fugiat, tenetur eius rem, architecto esse perspiciatis aperiam Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								 Saepe numquam amet doloremque repellendus, culpa accusantium nobis ducimus ipsam impedit praesentium accusamus enim minus sequi 
@@ -336,6 +329,8 @@
     	</div>
     </div>
 
+	<script type="module" src="js/Data/ServicesInfo.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
@@ -347,5 +342,6 @@
 	<script type="module" src="js/utils/getSelects.js"></script> <!-- Cargar selects -->
 	<script type="module" src="js/utils/SendEmailPublic.js"></script>
 	<script type="module" src="js/utils/PostContactPublic.js"></script>
+	
   </body>
   </html>

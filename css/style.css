@@ -10598,3 +10598,17 @@ nav[aria-label="breadcrumb"] li:before {
 .auto-height{
   height: auto !important;
 }
+
+.btn-custom {
+  background-color: #000;
+  padding: 0.4rem 1.3rem;
+  color: white;
+  border-radius: 99999px;
+  border: 1px #000 solid;
+}
+
+.btn-custom:hover {
+  background-color: #fff;
+  color: black;
+}
+ 

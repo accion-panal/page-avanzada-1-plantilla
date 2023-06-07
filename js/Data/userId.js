@@ -26,3 +26,41 @@ export const ContactInformation = {
         },
     ]
 }
+
+export const servicesInformation = {
+    titleInfo:'ASESORÍA BANCARIA',
+    descInfo: 'Data-Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis fugiat, tenetur eius rem, architecto esse perspiciatis aperiam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe numquam amet doloremque repellendus, culpa accusantium nobis ducimus ipsam impedit praesentium accusamus enim minus sequi pariatur in soluta nam, est ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis fugiat, tenetur eius rem, architecto esse perspiciatis aperiam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe numquam amet doloremque repellendus, culpa accusantium nobis ducimus ipsam impedit praesentium accusamus enim minus sequi pariatur in soluta nam, est ab.',
+    formTitle: 'PÚBLICA CON NOSOTROS',
+    formDesc: 'Data-Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis fugiat, tenetur eius rem, architecto esse perspiciatis aperiam',
+    bgImage:'images/nosotros_2.jpg',
+    cards:[{
+        id:1,
+        icon:'images/icono-03.svg',
+        title:'PÚBLICA CON NOSOTROS',
+        titleHref:'Completar Formulario',
+        href:'#publicagratis',
+        collapse:true,
+    },{
+        id:2,
+        icon:'images/icono-04.svg',
+        title:'ASESORÍA BANCARIA',
+        titleHref:'Ver más',
+        href:'#asesoriabancaria',
+        collapse:false,
+    },{
+        id:3,
+        icon:'images/icono-05.svg',
+        title:'Servicios Legales',
+        titleHref:'Ver más',
+        href:'#asesoriabancaria',
+        collapse:false,
+    },{
+        id:4,
+        icon:'images/icono-06.svg',
+        title:'Administración de Arriendos',
+        titleHref:'Ver más',
+        href:'#asesoriabancaria',
+        collapse:false,
+    },
+]
+}
