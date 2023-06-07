@@ -7,10 +7,10 @@ import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
 import { PropertyData } from "../Data/userId.js";
 
 export default async function apiCall() {
-  const {CodigoUsuarioMaestro,companyId,realtorId} = PropertyData;
+  const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
 
-  const response = await getProperties(1, 10, CodigoUsuarioMaestro, 1, companyId, realtorId);
-  const data = response.data;
+  let response = await getProperties(1, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
+  let data = response.data;
 
   const buttons = document.getElementById("buttons");
 
@@ -18,6 +18,7 @@ export default async function apiCall() {
   let btnPrev;
 
   console.log(data);
+  console.log(response);
 
   const response2 = await ExchangeRateServices.getExchangeRateUF();
   const ufValue = response2?.UFs[0]?.Valor;
@@ -31,9 +32,9 @@ export default async function apiCall() {
     const selectedValue = filtroSelect.value;
     console.log(selectedValue);
     console.log(data);
-  
+
     let dataOrdenada;
-  
+
     if (selectedValue === 'MayorMenor') {
       /* console.log('La opción seleccionada es MayorMenor'); */
       dataOrdenada = data.sort((a, b) => b.price - a.price);
@@ -51,7 +52,7 @@ export default async function apiCall() {
 
   function showItems() {
     document.getElementById("container-propiedad").innerHTML = data.map(data =>
-     `<div class="col-xs-12 col-md-6 col-lg-4">
+      `<div class="col-xs-12 col-md-6 col-lg-4">
      <div class="property-item mb-30">
                  <div class="border" style="background-image: url('images/img_1.jpg')">
                      <div class="shadow-properties m-3">
@@ -91,9 +92,67 @@ export default async function apiCall() {
      </div> 
  </div>
      `
-  ).join("");
+    ).join("");
+  }
+
+
+  /* Paginado */
+  let countPage = 1;
+  async function handleNextPage(){
+    countPage+=1;
+    response = await getProperties(countPage, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
+    data = response.data;
+
+    if(data.length === 0){
+      countPage-=1;
+      console.log('pagina maxima')
+      return;
+    }
+    console.log(countPage);
+    console.log(response);
+    console.log(data);
+    document.getElementById("current-pagination").innerHTML = countPage;
+    showItems();
   }
   
+  async function handlePrevPage(){
+    if(countPage === 1){
+      console.log('pagina minima 1');
+      return;
+    }
+    countPage-=1;
+    response = await getProperties(countPage, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
+    data = response.data;
+
+    document.getElementById("current-pagination").innerHTML = countPage;
+    console.log(countPage);
+    showItems();
+  }
+  console.log(countPage);
+
+  let pagination = document.getElementById('pagination-col');
+  if (pagination !== null) {
+    pagination.innerHTML = `
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+          <button id='prevButton' class="page-link" href="#">Previous</button>
+          </li>
+          <li class="page-item disabled"><a id='current-pagination' class="page-link" href="#">1</a></li>
+          <li class="page-item">
+          <button id='nextButton' class="page-link" href="#">Next</button>
+          </li>
+        </ul>
+      </nav>
+    `
+  };
+
+  const nextButton = document.getElementById('nextButton');
+  nextButton.addEventListener('click', handleNextPage);
+
+  const prevButton = document.getElementById('prevButton');
+  prevButton.addEventListener('click', handlePrevPage);
+
 }
 
 
