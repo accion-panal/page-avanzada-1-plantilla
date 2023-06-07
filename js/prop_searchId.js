@@ -11,6 +11,20 @@ formId.addEventListener('submit', function (e) {
 
     const {companyId} = PropertyData; // rescatar el valor de companyId : 1
 
+    if(idInput.value ===  ''){
+        // Div de alerta
+        let alertElement = document.querySelector('.alert');
+        alertElement.textContent = 'Propiedad no encontrada';
+        alertElement.classList.add('alert-danger');
+        alertElement.classList.remove('visually-hidden');
+        setTimeout(function () {
+            // Ocultar alerta despues de 5seg
+            alertElement.classList.add('visually-hidden');
+            alertElement.classList.remove('alert-danger');
+        }, 5000);
+        return;
+    }
+
     apiDetalleCall(idInput.value, 1, companyId)
         .then(result => {
             if (result) {
