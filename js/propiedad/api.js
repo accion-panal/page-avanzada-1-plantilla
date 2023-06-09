@@ -5,9 +5,13 @@ import ExchangeRateServices from "../services/ExchangeRateServices.js";
 import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
 
 import { PropertyData } from "../Data/userId.js";
+import renderCall from "../propiedad/render.js";
 
 export default async function apiCall() {
-  const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
+  localStorage.removeItem('globalResponse');
+  renderCall();
+
+  /* const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
 
   let response = await getProperties(1, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
   let data = response.data;
@@ -15,9 +19,10 @@ export default async function apiCall() {
   const buttons = document.getElementById("buttons");
 
   let btnNext;
-  let btnPrev;
+  let btnPrev; */
 
-  console.log(data);
+  /* localStorage.setItem('globalResponse', JSON.stringify(response)); */
+  /* console.log(data);
   console.log(response);
 
   const response2 = await ExchangeRateServices.getExchangeRateUF();
@@ -36,10 +41,10 @@ export default async function apiCall() {
     let dataOrdenada;
 
     if (selectedValue === 'MayorMenor') {
-      /* console.log('La opción seleccionada es MayorMenor'); */
+      //console.log('La opción seleccionada es MayorMenor');
       dataOrdenada = data.sort((a, b) => b.price - a.price);
     } else {
-      /* console.log('La opción seleccionada es Menor mayor'); */
+      // console.log('La opción seleccionada es Menor mayor');
       dataOrdenada = data.sort((a, b) => a.price - b.price);
     }
     console.log(dataOrdenada);
@@ -93,16 +98,16 @@ export default async function apiCall() {
  </div>
      `
     ).join("");
-  }
+  } */
 
 
   /* Paginado */
-  let countPage = 1;
+  /* let countPage = 1;
   async function handleNextPage(){
     countPage+=1;
     response = await getProperties(countPage, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
     data = response.data;
-
+    localStorage.setItem('globalResponse', JSON.stringify(response));
     if(data.length === 0){
       countPage-=1;
       console.log('pagina maxima')
@@ -123,7 +128,7 @@ export default async function apiCall() {
     countPage-=1;
     response = await getProperties(countPage, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
     data = response.data;
-
+    localStorage.setItem('globalResponse', JSON.stringify(response));
     document.getElementById("current-pagination").innerHTML = countPage;
     console.log(countPage);
     showItems();
@@ -151,7 +156,7 @@ export default async function apiCall() {
   nextButton.addEventListener('click', handleNextPage);
 
   const prevButton = document.getElementById('prevButton');
-  prevButton.addEventListener('click', handlePrevPage);
+  prevButton.addEventListener('click', handlePrevPage); */
 
 }
 

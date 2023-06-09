@@ -4,9 +4,12 @@ import ExchangeRateServices from "../services/ExchangeRateServices.js";
 
 import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
 import { PropertyData } from "../Data/userId.js";
+import renderCall from "../propiedad/render.js";
 
 export default async function apiCallList() {
-  const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
+
+  renderCall();
+  /* const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
   let response = await getProperties(1, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
   let data = response.data;
 
@@ -14,8 +17,18 @@ export default async function apiCallList() {
 
   let btnNext;
   let btnPrev;
-
   console.log(data);
+
+
+  let storedGlobalResponse = localStorage.getItem('globalResponse');
+  let globalResponse;
+
+  if (storedGlobalResponse) {
+    globalResponse = JSON.parse(storedGlobalResponse);
+  }
+  console.log('stored: ',globalResponse);
+  console.log('meta: ',globalResponse.meta);
+  console.log('data: ',globalResponse.data);
 
   const response2 = await ExchangeRateServices.getExchangeRateUF();
   const ufValue = response2?.UFs[0]?.Valor;
@@ -33,17 +46,17 @@ export default async function apiCallList() {
     let dataOrdenada;
   
     if (selectedValue === 'MayorMenor') {
-      /* console.log('La opción seleccionada es MayorMenor'); */
+      // console.log('La opción seleccionada es MayorMenor');
       dataOrdenada = data.sort((a, b) => b.price - a.price);
     } else {
-      /* console.log('La opción seleccionada es Menor mayor'); */
+      // console.log('La opción seleccionada es Menor mayor');
       dataOrdenada = data.sort((a, b) => a.price - b.price);
     }
     console.log(dataOrdenada);
     showItems();
-  }
+  } */
 
-  document.getElementById("total-prop").innerHTML = `<span>${response.meta.totalItems} Propiedades encontradas
+  /* document.getElementById("total-prop").innerHTML = `<span>${response.meta.totalItems} Propiedades encontradas
 	</span>`;
 
 
@@ -97,10 +110,10 @@ export default async function apiCallList() {
  </div>
      `
   ).join("");
-  }
+  } */
   
   /* Paginado */
-  let countPage = 1;
+  /* let countPage = 1;
   async function handleNextPage(){
     countPage+=1;
     response = await getProperties(countPage, 2, CodigoUsuarioMaestro, 1, companyId, realtorId);
@@ -154,7 +167,7 @@ export default async function apiCallList() {
   nextButton.addEventListener('click', handleNextPage);
 
   const prevButton = document.getElementById('prevButton');
-  prevButton.addEventListener('click', handlePrevPage);
+  prevButton.addEventListener('click', handlePrevPage); */
 
 }
 
