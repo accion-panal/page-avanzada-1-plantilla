@@ -161,8 +161,9 @@ document.getElementById("buscar")?.addEventListener("click", async () => {
 			behavior: "smooth",
 		});
    
-
-  document.getElementById("container-propiedad").innerHTML = filtred.data.map((data) => 
+  let gridContainer = document.getElementById("container-propiedad");
+  if (gridContainer !== null) {
+    document.getElementById("container-propiedad").innerHTML = filtred.data.map((data) => 
         `<div class="col-lg-4 col-md-6 col-sm-6" >
           <div class="property-item">
             <div class="bg-success property-item-img">
@@ -201,47 +202,52 @@ document.getElementById("buscar")?.addEventListener("click", async () => {
             </div>
           </div>
         </div>`).join("");
-
-  document.getElementById("container-propiedad-list").innerHTML = filtred.data.map((data) => `
-  <div class="col-property-item col-lg-12 col-sm-12" >
-          <div class="property-item flex-row align-items-center">
-            <div class="bg-success property-item-img">
-              <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
-                ><img
-                  class="img-fluid imgPropsList"
-                  src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "img/Sin.png"}"
-                  alt=""
-              /></a>
-            </div>
-    
-            <div class="card-body">
-              <div class="principal-info">
-                <small>${data.types} / ${data.operation}</small>
-                <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
-                  >${data.title}</a
-                >
-                <p>
-                  <i class="bi bi-pin-map"></i>${data.city != undefined && data.city != "" && data.city != null ? data.city : "No registra ciudad" }, ${data.commune != undefined && data.commune != "" && data.commune != null ? data.commune : "No registra comuna"}, Chile
-                </p>
-              </div>
-              <div class="secundary-info">
-                <small>REF: ${data.id}</small>
-                <div>
-                  <span>
-                    <i class="fa-sharp fa-solid fa-bed"></i>${data.bedroom != undefined && data.bedrooms != null && data.bedrooms != "" ? data.bedrooms : "0"}
-                  </span>
-                  <span>
-                    <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined && data.bathrooms != null && data.bathrooms != "" ? data.bathrooms : "0"}
-                  </span>
+  }
+  
+  let listContainer = document.getElementById("container-propiedad-list");
+  if (listContainer !== null) {
+    document.getElementById("container-propiedad-list").innerHTML = filtred.data.map((data) => `
+      <div class="col-property-item col-lg-12 col-sm-12" >
+              <div class="property-item flex-row align-items-center">
+                <div class="bg-success property-item-img">
+                  <a href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                    ><img
+                      class="img-fluid imgPropsList"
+                      src="${data.image != undefined && data.image != "" && data.image != null ? data.image : "img/Sin.png"}"
+                      alt=""
+                  /></a>
+                </div>
+        
+                <div class="card-body">
+                  <div class="principal-info">
+                    <small>${data.types} / ${data.operation}</small>
+                    <a class="card-title" href="/detalle_propiedad.html?${data.id}&statusId=${1}&companyId=${1}"
+                      >${data.title}</a
+                    >
+                    <p>
+                      <i class="bi bi-pin-map"></i>${data.city != undefined && data.city != "" && data.city != null ? data.city : "No registra ciudad" }, ${data.commune != undefined && data.commune != "" && data.commune != null ? data.commune : "No registra comuna"}, Chile
+                    </p>
+                  </div>
+                  <div class="secundary-info">
+                    <small>REF: ${data.id}</small>
+                    <div>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-bed"></i>${data.bedroom != undefined && data.bedrooms != null && data.bedrooms != "" ? data.bedrooms : "0"}
+                      </span>
+                      <span>
+                        <i class="fa-sharp fa-solid fa-toilet"></i> ${data.bathrooms != undefined && data.bathrooms != null && data.bathrooms != "" ? data.bathrooms : "0"}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <p>UF: ${clpToUf(data.price, ufValueAsNumber)} / CLP ${parseToCLPCurrency(data?.price)}</p>
+                  </div>
                 </div>
               </div>
-              <div class="more-info">
-                <p>UF: ${clpToUf(data.price, ufValueAsNumber)} / CLP ${parseToCLPCurrency(data?.price)}</p>
-              </div>
-            </div>
-          </div>
-        </div> `
-        ).join("");     
+            </div> `
+            ).join("");  
+  }
+     
 
 
 	}, 3000);

@@ -106,12 +106,12 @@
 							</select>
 						</div>
 						<div class="col-lg-6 p-1">
-							<select class="form-select bornone" id="region" aria-label="Default select example">
+							<select class="form-select bornone" id="regionTextId" aria-label="Default select example">
 								<option value="0" selected>Region</option>
 							</select>
 						</div>
 						<div class="col-lg-6 p-1">
-							<select class="form-select  bornone" id="commune" aria-label="Default select example">
+							<select class="form-select  bornone" id="communeTextId" aria-label="Default select example">
 								<option value="" selected>Comuna</option>	
 							</select>
 						</div>
@@ -156,11 +156,11 @@
 								</div>
 								<div class="col-6">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="UF">
 										<label class="form-check-label" for="inlineRadio1">UF</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="CLP">
 										<label class="form-check-label" for="inlineRadio2">CLP</label>
 									</div>
 								</div>
@@ -433,8 +433,10 @@
 
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
-	<script type="module" src="js/utils/filterOnSubmit.js"></script>
+	<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
+	<script type="module" src="js/utils/filterOnSubmit.js"></script> -->
+	<script type="module" src="js/utils/filterOnSearch.js"></script>
+	<script type="module" src="js/utils/pagination.js"></script>
 	<script type="module" src="js/indexList.js"></script>
 	<script type="module" src="js/utils/getSelects.js"></script>
 

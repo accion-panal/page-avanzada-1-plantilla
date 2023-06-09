@@ -2,6 +2,7 @@ import api from "./AuthencationServices.js"
 
 export const getProperties = async(page, limit, CodigoUsuarioMaestro, statusId, companyId, realtorId) => {
   let {data} = await api.get(`properties?page=${page}&limit=${limit}&CodigoUsuarioMaestro=${CodigoUsuarioMaestro}&realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}`);
+  console.log('getProperties: ',data);
   return data;
 }
 
@@ -30,6 +31,20 @@ const _covered_parking_lots = covered_parking_lots > 0 ? covered_parking_lots : 
 const response = await api.get(`properties?statusId=${_statusId}&companyId=${_companyId}${_operationType?`&operationType=${_operationType}`:''}${_typeOfProperty?`&typeOfProperty=${_typeOfProperty}`:''}${_region?`&region=${_region}`:''}${_commune?`&commune=${_commune}`:''}${_min_price?`&min_price=${_min_price}`:''}${_max_price ? `&max_price=${_max_price}`:''}${_bathrooms ? `&bathrooms=${_bathrooms}` : ''}${_bedrooms ? `&bedrooms=${_bedrooms}` : ''}${_covered_parking_lots?`&covered_parking_lots=${_covered_parking_lots}`:''}`);
 return response.data;
 
+}
+
+//* Filtros
+export const getPropertiesForCustomUrl = async (page, limit, CodigoUsuarioMaestro, statusId, companyId, realtorId,urlFilters) =>{
+  const response = await api.get(`properties?page=${page}&limit=${limit}&CodigoUsuarioMaestro=${CodigoUsuarioMaestro}&realtorId=${realtorId}&statusId=${statusId}&companyId=${companyId}${urlFilters}`);
+  console.log('getResponse: ',response)
+  return response.data;
+}
+
+//* Paginado
+export const getPagination = async (urlFilters) =>{
+  const response = await api.get(`properties?${urlFilters}`);
+  console.log('getPaginado: ',response)
+  return response.data;
 }
 
 
