@@ -185,13 +185,13 @@ export default async function paginationCall() {
     if (pagination !== null) {
         pagination.innerHTML = `
             <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
+                <ul class="pagination justify-content-center pagination-style">
                     <li class="page-item" id="prevPageId">
-                        <button id='prevButton' class="page-link" href="#">Previous</button>
+                        <button id='prevButton' class="page-link" href="#">⮜</button>
                     </li>
                     <li class="page-item disabled"><a id='current-pagination' class="page-link" href="#">1</a></li>
                     <li class="page-item" id="nextPageId">
-                        <button id='nextButton' class="page-link" href="#">Next</button>
+                        <button id='nextButton' class="page-link" href="#">⮞</button>
                     </li>
                 </ul>
             </nav>
