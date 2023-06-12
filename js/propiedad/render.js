@@ -6,6 +6,7 @@ import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
 
 import { PropertyData, limitDataApi } from "../Data/userId.js";
 import paginationCall from "../utils/pagination.js";
+import apiCallMap from "../propiedad/apiMapProp.js";
 
 export default async function renderCall() {
     //* INICIALIZACION DE VARIABLES
@@ -179,6 +180,11 @@ export default async function renderCall() {
                     </div>
                 </div>
             `).join("");
+        };
+
+        let containerMap = document.getElementById('div-map-section');
+        if (containerMap !== null) {
+            apiCallMap()
         };
     };
 }
