@@ -70,129 +70,139 @@
 		</div>
 	</nav>
 
-<div class="section mx-md-5 mt-5" >
-	<div class="container  p-lg-5 " style="padding-top: 0 !important;padding-bottom: 0 !important;box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;">
-		<div class="row m-lg-5 " >
-			<div class="col-lg-2 text-center p-2" >
-				<div class="section p-5 mt-4 " style="border-right: 1px solid black;" id="operationTypeRadio">
-					<div class="form-check mb-4">
-						<input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" id="operationType-venta" value="venta">
-						<label class="form-check-label " for="flexRadioDefault1">
-						Venta
-						</label>
+	<div class="section mx-md-5 mt-5" ><!-- style="padding-bottom: 0;margin-top: 100px;margin-left: 100px;margin-right: 100px;;" -->
+		<div class="container  p-lg-5 " style="padding-top: 0 !important;padding-bottom: 0 !important;box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;">
+			<div class="row m-lg-5 " >
+				<div class="col-lg-2 text-center p-2" >
+					<div class="section p-5 mt-4 " style="border-right: 1px solid black;" id="operationTypeRadio">
+						<div class="form-check mb-4">
+							<input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" id="operationType-venta" value="venta">
+							<label class="form-check-label " for="flexRadioDefault1">
+							Venta
+							</label>
+						</div>
+						<div class="form-check mb-4">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  id="operationType-arriendo" value="arriendo">
+							<label class="form-check-label" for="flexRadioDefault2">
+							Arriendo
+							</label>
+						</div>
+						<div class="form-check mb-4">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"  id="operationType-arriendo-temp" value="arriendo_temporal">
+							<label class="form-check-label" for="flexRadioDefault3">
+							Arriendo temporal
+							</label>
+						</div>
 					</div>
-					<div class="form-check mb-4">
-						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  id="operationType-arriendo" value="arriendo">
-						<label class="form-check-label" for="flexRadioDefault2">
-						Arriendo
-						</label>
-					</div>
-					<div class="form-check mb-4">
-						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"  id="operationType-arriendo-temp" value="arriendo_temporal">
-						<label class="form-check-label" for="flexRadioDefault3">
-						Arriendo temporal
-						</label>
-					</div>
-				</div>
-			  </div>
-			<div class="col-lg-8 ">
-				<div class="row p-5 text-center ">
-					<div class="col-lg-6 p-1">
-						<select class="form-select bornone" id="typeOfProperty" aria-label="Default select example">
-							<option value="" selected>Tipo inmueble</option>
-							<option value="casa">Casa</option>
-							<option value="bodega">Bodega</option>
-							<option value="departamento">Departamento</option>
-							<option value="estacionamientos">Estacionamiento</option>
-						</select>
-					</div>
-					<div class="col-lg-6 p-1">
-						<select class="form-select bornone" id="region" aria-label="Default select example">
-							<option value="0" selected>Region</option>
-						</select>
-					</div>
-					<div class="col-lg-6 p-1">
-						<select class="form-select  bornone" id="commune" aria-label="Default select example">
-							<option value="" selected>Comuna</option>	
-						</select>
-					</div>
-					<div class="col-lg-6 p-1">
-						<select class="form-select bornone" id="bedrooms" aria-label="Default select example">
-							<option value="" selected>Habitaciones</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div class="col-lg-6 p-1">
-						<select class="form-select bornone" id="covered_parking_lots" aria-label="Default select example">
-							<option value="" selected>Estacionamientos</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div class="col-lg-6 p-1">
-						<select class="form-select bornone" id="bathrooms" aria-label="Default select example">
-							<option value="" selected>Baños</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
-						<div class="row text-start  p-2">
-							<div class="col-6 " style="padding-left: 1rem;">
-								<div class="row bornone" style="margin-right: 5px;">
-									<div class="col-12">
-										Precio
+	  			</div>
+				<div class="col-lg-8 ">
+
+					<div class="row p-5 text-center ">
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="typeOfProperty" aria-label="Default select example">
+								<option value="" selected>Tipo inmueble</option>
+								<option value="casa">Casa</option>
+								<option value="bodega">Bodega</option>
+								<option value="departamento">Departamento</option>
+								<option value="estacionamientos">Estacionamiento</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="regionTextId" aria-label="Default select example">
+								<option value="0" selected>Region</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select  bornone" id="communeTextId" aria-label="Default select example">
+								<option value="" selected>Comuna</option>	
+							</select>
+						</div>
+
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="bedrooms" aria-label="Default select example">
+								<option value="" selected>Habitaciones</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="covered_parking_lots" aria-label="Default select example">
+								<option value="" selected>Estacionamientos</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+						<div class="col-lg-6 p-1">
+							<select class="form-select bornone" id="bathrooms" aria-label="Default select example">
+								<option value="" selected>Baños</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+						</div>
+
+						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+							<div class="row text-start  p-2">
+								<div class="col-6 " style="padding-left: 1rem;">
+									<div class="row bornone" style="margin-right: 5px;">
+										<div class="col-12">
+											Precio
+										</div>
+									</div>
+
+								</div>
+								<div class="col-6">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="UF">
+										<label class="form-check-label" for="inlineRadio1">UF</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="CLP">
+										<label class="form-check-label" for="inlineRadio2">CLP</label>
 									</div>
 								</div>
 							</div>
-							<div class="col-6">
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-									<label class="form-check-label" for="inlineRadio1">UF</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-									<label class="form-check-label" for="inlineRadio2">CLP</label>
-								</div>
-							</div>
-						</div>			
-					</div>
-					<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
-						<div class="row text-start">
-							<div class="col-lg-6 " style="padding-left: 1.5rem;" >
-								<div class="row bornone" style="margin-right: 5px;" >
-									<div class="col-6">
-										<input type="number" class=" text-start" style="width: 100px;border: none;" min="0" pattern="^[0-9]+" name="desde" id="min_price" placeholder="Desde">
+						
+						</div>
+						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+							<div class="row text-start">
+								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
+									<div class="row bornone" style="margin-right: 5px;" >
+										<div class="col-6">
+											<input type="number" class=" text-start" style="width: 100px;border: none;" min="0" pattern="^[0-9]+" name="desde" id="min_price" placeholder="Desde">
+										</div>
 									</div>
+								
 								</div>
-							</div>
-							<div class="col-lg-6 " style="padding-left: 1.5rem;" >
-								<div class="row bornone" style="margin-right: 5px;" >
-									<div class="col-6">
-										<input type="number" class="text-center" style="width: 100px;border: none" min="0" pattern="^[0-9]+" name="hasta" id="max_price" placeholder="Hasta">	
+								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
+									<div class="row bornone" style="margin-right: 5px;" >
+										<div class="col-6">
+											<input type="number" class="text-center" style="width: 100px;border: none" min="0" pattern="^[0-9]+" name="hasta" id="max_price" placeholder="Hasta">	
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+	  			</div>
+				<div class="col-lg-2 text-center p-lg-5  pt-5 boton-media" >
+					<button type="button" class="btn btn-rounded btn-circle" id="buscar2" style="background-color:#000;color:#fff;">
+						Buscar
+					  </button>
+					<!-- <p><a href="properties.html" target="_blank" class="btn btn-primary text-white py-3 px-4 "  style="background-color: #333;">Buscar</a></p> -->
 				</div>
-			  </div>
-			<div class="col-lg-2 text-center p-lg-5  pt-5 boton-media" >
-				<button type="button" class="btn btn-rounded btn-circle" id="buscar2" style="background-color:#000;color:#fff;">
-					Buscar
-				  </button>
-				<!-- <p><a href="properties.html" target="_blank" class="btn btn-primary text-white py-3 px-4 "  style="background-color: #333;">Buscar</a></p> -->
+
 			</div>
+
+
+
 		</div>
 	</div>
-</div>
 
 <!--                                       Botones Grilla - Carta - Mapa             -->
 	<div class="section" style="padding-bottom: 0;">
@@ -214,14 +224,14 @@
 				</div>
 			</div>
 			<div class="row " style="padding-right: 12%;padding-left: 14%;">
-				<div class="col-lg-6" style="padding-top: 20px ;">
+				<div class="col-lg-6" style="padding-top: 20px ;" id="total-prop">
 					Paginas encontradas 321
 				</div>
 				<div class="col-lg-6 text-center ">
 					<div class="row align-items-center" style="padding-top: 10px; ">
 						<div class="col-4 text-end">Orden por:</div>
 						<div class="col-8 text-center">
-							<select class="form-select" aria-label="Default select example">
+							<select class="form-select" aria-label="Default select example" id="FilterPrice">
 								<option selected>Precio mayor a menor</option>
 								<option value="1">Precio menor a mayor</option>
 	
@@ -243,7 +253,7 @@
 
 
 <div class="row" style="padding-left: 13%;padding-right: 13%;">
-	<div class="col-12">
+	<div class="col-12" id="div-map-section">
 		<!-- <iframe class="mapgoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.5958879815885!2d-70.56693998897713!3d-33.40770567329557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc2ce4e1739%3A0x8f2bfdc565cf902f!2sAv.%20Apoquindo%206410%2C%207550000%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1668719016513!5m2!1sen!2scl" 
 		style="border:0; padding-left: 0px;padding-right: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 		<div id="map"></div> 
@@ -361,10 +371,12 @@
 
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
-	<script type="module" src="js/utils/filterOnSubmit.js"></script>
+	<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
+	<script type="module" src="js/utils/filterOnSubmit.js"></script> -->
 	<!-- <script type="module" src="js/propiedad/apiMapProp.js"></script> -->
 	<script type="module" src="js/prop_Map.js"></script>
 	<script type="module" src="js/utils/getSelects.js"></script>
+	<script type="module" src="js/utils/filterOnSearch.js"></script>
+	<script type="module" src="js/utils/pagination.js"></script>
   </body>
   </html>

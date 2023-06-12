@@ -196,15 +196,26 @@ export default async function paginationCall() {
                 </ul>
             </nav>
     `};
-    document.getElementById("current-pagination").innerHTML = countPage+' / '+maxPage;
+
+
+    let currentPaginations = document.getElementById("current-pagination");
+    if(currentPaginations !== null){
+        document.getElementById("current-pagination").innerHTML = countPage+' / '+maxPage;
+    }
+    
     if(storedCountPage && storedCountPage > 1){
         document.getElementById("current-pagination").innerHTML = countPage+' / '+maxPage;
     };
 
     const nextButton = document.getElementById('nextButton');
-    nextButton.addEventListener('click', handleNextPage);
-
+    if(nextButton !== null){
+        nextButton.addEventListener('click', handleNextPage);
+    }
     const prevButton = document.getElementById('prevButton');
-    prevButton.addEventListener('click', handlePrevPage);
+    if(prevButton !== null){
+        prevButton.addEventListener('click', handlePrevPage);
+    }
+    
+    
 
 };

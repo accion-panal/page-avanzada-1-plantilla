@@ -97,7 +97,7 @@ const filterSelects = async () => {
     
 
     // COMUNA POR VALUE DE NAME
-/*     let communeText = document.getElementById('communeText');
+    let communeText = document.getElementById('communeText');
     if (communeText !== null) {
         region.addEventListener("change", async (data) => {
             let aux = await getCommune(data.target.value);
@@ -105,7 +105,7 @@ const filterSelects = async () => {
             `<option value="${data.name}">${data.name}</option>`
             );
         });
-    } */
+    }
 
     let communeTextId = document.getElementById('communeTextId');
     if (communeTextId !== null) {
