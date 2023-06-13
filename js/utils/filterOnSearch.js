@@ -18,6 +18,56 @@ let typePrice;
 let minPrice;
 let maxPrice;
 
+
+
+let globalQuery;
+//* Actualizar variables si vienen del index
+let storedGlobalQuery = localStorage.getItem('globalQuery');
+if (storedGlobalQuery) {
+    globalQuery = JSON.parse(storedGlobalQuery);
+    console.log('globalQuery: ',globalQuery);
+
+    if(globalQuery.bathrooms != null){
+        document.getElementById("bathrooms").value = globalQuery.bathrooms;
+    }
+    if(globalQuery.bedrooms != null){
+        document.getElementById("bedrooms").value = globalQuery.bedrooms;
+    }
+    if(globalQuery.commune != null){
+       /*  document.getElementById("communeTextId").value = globalQuery.commune; */
+    }
+
+    if(globalQuery.covered_parking_lots != null){
+        document.getElementById("covered_parking_lots").value = globalQuery.covered_parking_lots;
+    }
+    if(globalQuery.max_price != null){
+        document.getElementById("max_price").value = globalQuery.max_price;
+    }
+    if(globalQuery.min_price != null){
+        document.getElementById("min_price").value = globalQuery.min_price;
+    }
+    if(globalQuery.operationType != null){
+        /* document.getElementById("operationType").value = globalQuery.operationType; */
+
+        if(globalQuery.operationType == 'venta'){document.getElementById('flexRadioDefault1').checked = true}
+        if(globalQuery.operationType == 'arriendo'){document.getElementById('flexRadioDefault2').checked = true}
+        if(globalQuery.operationType == 'arriendo_temporal'){document.getElementById('flexRadioDefault3').checked = true}
+    }
+    if(globalQuery.typePrice != null){
+        /* document.getElementById("operationType").value = globalQuery.operationType; */
+
+        if(globalQuery.typePrice == 'uf'){document.getElementById('inlineRadio1').checked = true}
+        if(globalQuery.typePrice == 'clp'){document.getElementById('inlineRadio2').checked = true}
+    }
+    if(globalQuery.region != null){
+        /* document.getElementById("region").value = globalQuery.region; */
+    }
+    if(globalQuery.typeOfProperty != null){
+        document.getElementById("typeOfProperty").value = globalQuery.typeOfProperty;
+    }
+} 
+
+
 //* Actualizar variables
 //! Operacion
 document.getElementById('flexRadioDefault1').addEventListener('change', mostrarValor);

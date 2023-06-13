@@ -1,8 +1,8 @@
 
 :root {
 /* Colores variables */
-  --color-primary: #000000;
-  --color-secundary: #ffffff;
+  --color-primary: #559fc2;
+  --color-secundary: #5da87a;
   --color-info: #3d3d3d;
   --color-success: #58fa00;
 
@@ -9709,7 +9709,7 @@ textarea {
   transform: translate(-50%, -50%); }
 
 .menu-bg-wrap {
-  background-color: #333;
+  background-color: var(--color-primary);
   padding: 20px 30px;
   position: fixed;
   width: 70%;
@@ -9769,7 +9769,7 @@ textarea {
   .hero .form-search .form-control {
     margin-right: 10px; }
   .hero .form-search .btn {
-    background-color: #005555;
+    background-color: var(--color-primary) !important;
     padding-left: 30px;
     padding-right: 30px;
     color: #fff; }
@@ -9835,6 +9835,7 @@ textarea {
     z-index: 2; }
 
 .btn {
+  background-color: var(--color-primary) !important;
   text-decoration: none !important;
   border-radius: 30px;
   padding-top: 15px;
@@ -10403,7 +10404,7 @@ nav[aria-label="breadcrumb"] li:before {
       width: 40px;
       height: 40px;
       position: relative;
-      background-color: #333;;
+      background-color: var(--color-primary);
       border-radius: 50px;
       margin-left: 5px;
       margin-right: 5px;
@@ -10600,11 +10601,11 @@ nav[aria-label="breadcrumb"] li:before {
 }
 
 .btn-custom {
-  background-color: #000;
+  background-color: var(--color-primary);
   padding: 0.4rem 1.3rem;
   color: white;
   border-radius: 99999px;
-  border: 1px #000 solid;
+  border: 1px var(--color-primary) solid;
 }
 
 .btn-custom:hover {
@@ -10612,3 +10613,32 @@ nav[aria-label="breadcrumb"] li:before {
   color: black;
 }
  
+
+.pagination-style li button{
+  background: rgba(0, 32, 74, 0.1);
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  padding: 0 !important;
+  text-align: center;
+  margin: 0 0.3rem !important;
+  color: #000;
+}
+
+.pagination-style li button:hover{
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.pagination-style li a{
+  background: rgba(0, 32, 74, 0.1);
+  border-radius: 9999px !important;
+  width: 7rem;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.color-bg-custom{
+  background-color: var(--color-secundary) !important;
+}
