@@ -89,7 +89,7 @@
 					<h1 class="heading" data-aos="fade-up" style="font-size: 50px;">ENCUENTRA TU PROPIEDAD</h1>
 					<form method="POST" id="form-searchId" class="narrow-w form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
 						<input id="form-idProperty" type="text" class="form-control px-4 " style="background-color: white;" placeholder="Busca por Codigo de propiedad">
-						<button type="submit" class="btn btn-primary" style="background-color: #333;">Buscar</button>
+						<button type="submit" id="buscarId" class="btn btn-primary" style="background-color: #333;">Buscar</button>
 					</form>
 					<div class="alert visually-hidden" role="alert"></div>
 				</div>
@@ -207,11 +207,11 @@
 								</div>
 								<div class="col-6">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="uf">
 										<label class="form-check-label" for="inlineRadio1">UF</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="clp">
 										<label class="form-check-label" for="inlineRadio2">CLP</label>
 									</div>
 								</div>
@@ -520,8 +520,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script type="module" src="js/prop_destacada.js"></script>
 	<script type="module" src="js/count-cant-prop.js"></script>
-	<script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
-	<script type="module" src="js/utils/filterOnSubmit.js"></script>
+	<script type="module" src="js/utils/pruebasFiltro.js"></script>
+	<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script> -->
+	<!-- <script type="module" src="js/utils/filterOnSubmit.js"></script> -->
 	<script type="module" src="js/utils/getSelects.js"></script>
 	<script type="module" src="js/prop_searchId.js"></script>
 
