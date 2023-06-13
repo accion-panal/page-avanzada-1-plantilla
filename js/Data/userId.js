@@ -1,12 +1,8 @@
 export const PropertyData = {CodigoUsuarioMaestro: 0, companyId: 1, realtorId:0};
 
-<<<<<<< HEAD
 
 export const limitDataApi = { limit:10 };
 
-=======
-export const limitDataApi = { limit:6 };
->>>>>>> 154fe9c100bb60a05abcf488b89e57ce3ce4a9bb
 
 export const RealtorSendEmailData = {
     sendEmail: 'nicolascabreramillacan@gmail.com',  /* SendEmail.js */
