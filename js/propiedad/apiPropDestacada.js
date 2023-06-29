@@ -18,7 +18,7 @@ export default async function apiDestCall() {
             <div class="property-item mb-30">
                 <div class="border" style="background-image: url('images/img_1.jpg')">
                     <div class="shadow-properties m-3">
-                        <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${1}" class="img">
+                        <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" class="img">
                             <div class="property-content text-center" >
                                 <div class="card-body">
                                     <p class="">${data.id}</p>
