@@ -4,8 +4,6 @@ const loadInformation = () => {
     const dataHorario = ContactInformation.horario;
     console.log(dataHorario)
 
-    /* LLENAR INFORMACION DE MISION */
-    /* REGION: rescatar value por su id */
     let address = document.getElementById('address-ContactInfo');
     if (address !== null) {
         address.innerHTML = `
