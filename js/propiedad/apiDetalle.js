@@ -1,16 +1,21 @@
 import { getPropertiesForId } from "../services/PropertiesServices.js";
 import ExchangeRateServices from "../services/ExchangeRateServices.js";
-import { parseToCLPCurrency, clpToUf } from '../utils/getExchangeRate.js';
+import { parseToCLPCurrency, clpToUf, validationUF,validationCLP, ufToClp } from '../utils/getExchangeRate.js';
 
 export default async function apiDetalleCall(id, statusId = 1, companyId) {
     try {
         let { data } = await getPropertiesForId(id, statusId, companyId);
         const response = await ExchangeRateServices.getExchangeRateUF();
         const ufValue = response?.UFs[0]?.Valor
-        const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
+        const ufValueAsNumber = parseFloat(ufValue.replace(',', '.')); 
         let img;
 
         let realtorInfo = data.realtor;
+
+        //! transformar valor del uf a int
+        const cleanedValue = ufValue.replace(/\./g, '').replace(',', '.');
+        const ufValueAsInt = parseFloat(cleanedValue).toFixed(0);
+        //!--
 
         console.log(data)
         console.log(realtorInfo)
@@ -30,8 +35,8 @@ export default async function apiDetalleCall(id, statusId = 1, companyId) {
             `;
             /* Precio */
             document.getElementById('price-info-prop').innerHTML = `
-                <b><h1 class="heading " style="font-weight: bold; color: #4D4D4D;">UF ${clpToUf(data.price, ufValueAsNumber)}</h1></b>
-                <h5 class="heading "> CLP ${parseToCLPCurrency(data?.price)}</h5>
+                <b><h1 class="heading " style="font-weight: bold; color: #4D4D4D;">UF ${validationUF(data.currency.isoCode) ? data.price : clpToUf(data.price, ufValueAsNumber)}</h1></b>
+                <h5 class="heading "> CLP ${validationCLP(data.currency.isoCode) ? parseToCLPCurrency(data?.price): parseToCLPCurrency(ufToClp(data.price, ufValueAsInt))}</h5>
             `;
             /* Imagenes en splide */
             data.images.forEach((images, index) => {img += ` 

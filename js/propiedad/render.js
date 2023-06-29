@@ -2,7 +2,7 @@ import { getProperties } from "../services/PropertiesServices.js";
 
 import ExchangeRateServices from "../services/ExchangeRateServices.js";
 
-import { parseToCLPCurrency, clpToUf } from "../utils/getExchangeRate.js";
+import { parseToCLPCurrency, clpToUf,validationUF } from "../utils/getExchangeRate.js";
 
 import { PropertyData, limitDataApi } from "../Data/userId.js";
 import paginationCall from "../utils/pagination.js";
@@ -91,7 +91,7 @@ export default async function renderCall() {
                     <div class="property-item mb-30">
                         <div class="border" style="background-image: url('images/img_1.jpg')">
                             <div class="shadow-properties m-3">
-                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${1}" class="img">
+                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" class="img">
                                     <div class="property-content text-center" >
                                         <div class="card-body">
                                             <p class="">${data.id}</p>
@@ -108,7 +108,7 @@ export default async function renderCall() {
                                                 <div class="col-4">
                                                     <div class="row">
                                                         <div class="col-12"><h5>UF</h5></div>
-                                                        <div class="col-12">${clpToUf(data.price, ufValueAsNumber)}</div>
+                                                        <div class="col-12">${validationUF(data.currency.isoCode) ? data.price : clpToUf(data.price, ufValueAsNumber)}</div>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
@@ -139,7 +139,7 @@ export default async function renderCall() {
                             <div class="col-md-4" style="background-image: url(images/img_1.jpg);" >
                             </div>
                             <div class="col-md-8 px-md-5" >
-                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${1}">
+                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}">
                                     <div class="card-body " >
                                         <p class="">${data.id}</p>
                                         <p class=" "> <i class="fa fa-map-marker fa-lg  p-1"></i> ${data.address != null && data.address != undefined && data.address != "" ? data.address : "No registra dirección"},${data.commune != null & data.commune != undefined && data.commune != "" ? data.commune : "No registra comuna"}</p>
@@ -155,7 +155,7 @@ export default async function renderCall() {
                                             <div class="col-4">
                                                 <div class="row">
                                                     <div class="col-12"><h5>UF</h5></div>
-                                                    <div class="col-12">${clpToUf(data.price, ufValueAsNumber)}</div>
+                                                    <div class="col-12">${validationUF(data.currency.isoCode) ? data.price : clpToUf(data.price, ufValueAsNumber)}</div>
                                                 </div>
                                             </div>
                                             <div class="col-4">

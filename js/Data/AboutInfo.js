@@ -14,7 +14,7 @@ const loadInformation = () => {
     }
 
     /* LLENAR INFORMACION DE VISION */
-    /* REGION: rescatar value por su id */
+    /* VISION: rescatar value por su id */
     let vision = document.getElementById('vision-info');
     if (vision !== null) {
         vision.innerHTML = `
