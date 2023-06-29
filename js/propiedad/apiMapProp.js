@@ -66,7 +66,7 @@ export default async function apiCallMap() {
                 <span>${data.title}</span>
                 <br>
                 <br>
-                <a href="/property-single.html?${data.id}&realtorId=${0}&statusId=${1}&companyId=${1}" name="VerDetalle"  class="more d-flex align-items-center float-start">
+                <a href="/property-single.html?${data.id}&realtorId=${realtorId}&statusId=${1}&companyId=${companyId}" name="VerDetalle"  class="more d-flex align-items-center float-start">
                 <span class="label" >Ver Detalle</span>
                 <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
                 </a>`)
