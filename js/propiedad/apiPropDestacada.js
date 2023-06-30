@@ -12,11 +12,18 @@ export default async function apiDestCall() {
     const response = await ExchangeRateServices.getExchangeRateUF();
     const ufValue = response?.UFs[0]?.Valor
     const ufValueAsNumber = parseFloat(ufValue.replace(',', '.'));
+
+    //todo: Modificar url de image
+    data = data.map(item => {
+        // Reemplazar "\\" por "//" en la propiedad "image"
+        item.image = item.image.replace(/\\/g, "//");
+        return item;
+    });
       
     document.getElementById('container-prop-destacada').innerHTML = filtrado.map(data => 
           `<li class="splide__slide">
             <div class="property-item mb-30">
-                <div class="border" style="background-image: url('images/img_1.jpg')">
+                <div class="border" style="background-image: url('${data.image.endsWith('.jpg') ? `${data.image}`:`https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg`}'); background-size: cover;">
                     <div class="shadow-properties m-3">
                         <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" class="img">
                             <div class="property-content text-center" >

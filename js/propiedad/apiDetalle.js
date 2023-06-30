@@ -8,9 +8,12 @@ export default async function apiDetalleCall(id, statusId = 1, companyId) {
         const response = await ExchangeRateServices.getExchangeRateUF();
         const ufValue = response?.UFs[0]?.Valor
         const ufValueAsNumber = parseFloat(ufValue.replace(',', '.')); 
-        let img;
 
         let realtorInfo = data.realtor;
+
+        let updatedImages = data.images.map(function (image) {
+            return image.replace(/\\/g, "//");
+        });
 
         //! transformar valor del uf a int
         const cleanedValue = ufValue.replace(/\./g, '').replace(',', '.');
@@ -38,22 +41,24 @@ export default async function apiDetalleCall(id, statusId = 1, companyId) {
                 <b><h1 class="heading " style="font-weight: bold; color: #4D4D4D;">UF ${validationUF(data.currency.isoCode) ? data.price : clpToUf(data.price, ufValueAsNumber)}</h1></b>
                 <h5 class="heading "> CLP ${validationCLP(data.currency.isoCode) ? parseToCLPCurrency(data?.price): parseToCLPCurrency(ufToClp(data.price, ufValueAsInt))}</h5>
             `;
-            /* Imagenes en splide */
-            data.images.forEach((images, index) => {img += ` 
-                <li class="splide__slide ${ index == 0 ? "active" : ""}"> 
-                    <img src="${images != null && images != "" && images != undefined  ? images : "img/Sin.png"}" style="height:600px;width:100%;"/>
-                </li>	
-            `})
-            document.getElementById('carrucel-img').innerHTML = `
-                <li class="splide__slide">${img}</li>
-            `;
-            let splide = new Splide(".splide", {
-                type: "fade",
-                padding: '5rem',
-                rewind:true,
-                autoplay: "play",
-                
+            //! Imagenes en splide */
+            let img = '';
+            updatedImages.forEach((image, index) => {
+                img += `
+                    <li class="splide__slide ${index === 0 ? 'active' : ''}">
+                        <img src="${image || 'img/Sin.png'}" style="height: 600px; width: 100%;" />
+                    </li>
+                `;
             });
+            document.getElementById('carrucel-img').innerHTML = img;
+
+            let splide = new Splide('.splide', {
+                type: 'fade',
+                padding: '5rem',
+                rewind: true,
+                autoplay: 'play',
+            });
+
             splide.mount();
 
             /* Descripcion/Caracteristicas */
