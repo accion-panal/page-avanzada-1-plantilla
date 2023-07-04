@@ -86,6 +86,10 @@ document.getElementById('typeOfProperty').addEventListener('change' ,(element) =
 document.getElementById("regionTextId").addEventListener( "change", (element) => {
     region = element.target.value;
     console.log('id region: ',region);
+    if(element.target.value === 0 || element.target.value === '0'){
+        region = '';
+        commune = '';
+    }
 })
 
 //! Comuna

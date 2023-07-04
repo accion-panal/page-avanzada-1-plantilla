@@ -62,7 +62,7 @@ const filterSelects = async () => {
                 return `<option value="${data.value}">${data.name}</option>`;
             } else {
                 return `
-                    <option value="0" selected >Tipo Propiedad</option>
+                    <option value="" selected >Tipo Propiedad</option>
                     <option value="${data.value}">${data.name}</option>
                 `;
             }
@@ -76,7 +76,7 @@ const filterSelects = async () => {
                 return `<option value="${data.value}">${data.name}</option>`;
             } else {
                 return `
-                    <option value="0" selected >Operacion</option>
+                    <option value="" selected >Operacion</option>
                     <option value="${data.value}">${data.name}</option>
                 `;
             }
@@ -113,9 +113,17 @@ const filterSelects = async () => {
             let regionValue = data.target.value;
             let idRegion = parseInt(regionValue.match(/\d+/)[0]);
             let aux = await getCommune(idRegion);
-            document.getElementById("communeTextId").innerHTML = aux.data.map((data) => 
-            `<option value="${data.name}">${data.name}</option>`
-            );
+            document.getElementById("communeTextId").innerHTML = aux.data.map((data,i) => { 
+            if (i != 0) {
+                return `<option value="${data.name}">${data.name}</option>`;
+            }else{
+                return `
+                    <option value="" selected >Comuna</option>
+                    <option value="${data.name}">${data.name}</option>
+                `;
+            }
+            
+            });
         });
     }
     
