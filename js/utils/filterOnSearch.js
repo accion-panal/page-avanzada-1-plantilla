@@ -1,11 +1,13 @@
 import { getPropertiesForCustomUrl } from "../services/PropertiesServices.js";
 import { PropertyData,limitDataApi } from '../Data/userId.js'
-import { getRegiones } from "../services/PropertiesServices.js";
+import { getRegiones, getCommune } from "../services/PropertiesServices.js";
 import paginationCall from "./pagination.js";
 
 import renderCall from "../propiedad/render.js";
 
 //*Inicializar variables
+let { data } = await getRegiones();
+
 const { CodigoUsuarioMaestro, companyId, realtorId } = PropertyData;
 let operation;
 let typeOfProperty;
@@ -29,27 +31,29 @@ if (storedGlobalQuery) {
 
     if(globalQuery.bathrooms != null){
         document.getElementById("bathrooms").value = globalQuery.bathrooms;
+        bathrooms = globalQuery.bathrooms;
     }
     if(globalQuery.bedrooms != null){
         document.getElementById("bedrooms").value = globalQuery.bedrooms;
-    }
-    if(globalQuery.commune != null){
-       /*  document.getElementById("communeTextId").value = globalQuery.commune; */
+        bedrooms = globalQuery.bedrooms;
     }
 
     if(globalQuery.covered_parking_lots != null){
         document.getElementById("covered_parking_lots").value = globalQuery.covered_parking_lots;
+        parkingLots = globalQuery.covered_parking_lots;
     }
     if(globalQuery.max_price != null){
         document.getElementById("max_price").value = globalQuery.max_price;
+        maxPrice = globalQuery.max_price;
     }
     if(globalQuery.min_price != null){
         document.getElementById("min_price").value = globalQuery.min_price;
+        minPrice = globalQuery.min_price;
     }
     if(globalQuery.operationType != null){
         /* document.getElementById("operationType").value = globalQuery.operationType; */
-
-        if(globalQuery.operationType == 'venta'){document.getElementById('flexRadioDefault1').checked = true}
+        operation = globalQuery.operationType;
+        if(globalQuery.operationType == 'venta'){document.getElementById('flexRadioDefault1').checked = true;}
         if(globalQuery.operationType == 'arriendo'){document.getElementById('flexRadioDefault2').checked = true}
         if(globalQuery.operationType == 'arriendo_temporal'){document.getElementById('flexRadioDefault3').checked = true}
     }
@@ -59,11 +63,30 @@ if (storedGlobalQuery) {
         if(globalQuery.typePrice == 'uf'){document.getElementById('inlineRadio1').checked = true}
         if(globalQuery.typePrice == 'clp'){document.getElementById('inlineRadio2').checked = true}
     }
+    //* Actualizar variable segun el globalQuery
     if(globalQuery.region != null){
-        /* document.getElementById("region").value = globalQuery.region; */
+        //globalQuery.region = 2
+        //select region = 2 Antofagasta
+        //buscar = Antofagasta
+        const regionData = data.regions.find(region => region.id == globalQuery.region);
+        region = `${regionData.name}`;
+        console.log(region)
+
     }
+    //* Actualizar variable segun el globalQuery
+    if(globalQuery.commune != null){
+        //globalQuery.commune = 5
+        //select commune = Calama
+        //buscar = Calama
+        let aux = await getCommune(globalQuery.region);
+        const communeData = aux.data.find(commune => commune.id == globalQuery.commune);
+        commune = `${communeData.name}`
+        console.log(commune)
+
+    }
+    //* Actualizar variable segun el globalQuery
     if(globalQuery.typeOfProperty != null){
-        document.getElementById("typeOfProperty").value = globalQuery.typeOfProperty;
+        typeOfProperty = globalQuery.typeOfProperty;
     }
 } 
 
@@ -80,6 +103,7 @@ function mostrarValor(event) {
 //!Tipo de propiedad
 document.getElementById('typeOfProperty').addEventListener('change' ,(element) => {
     typeOfProperty =  element.target.value;
+    console.log(element.target.value);
 })
 
 //! Region
@@ -90,11 +114,13 @@ document.getElementById("regionTextId").addEventListener( "change", (element) =>
         region = '';
         commune = '';
     }
+    console.log(element.target.value);
 })
 
 //! Comuna
 document.getElementById("communeTextId").addEventListener( "change", (element) => {
     commune = element.target.value;  
+    console.log(element.target.value);
 })
 
 //! Habitaciones
