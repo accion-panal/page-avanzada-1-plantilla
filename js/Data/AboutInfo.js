@@ -1,6 +1,7 @@
 import { AboutInformation } from "../Data/userId.js";
 
 const loadInformation = () => {
+    localStorage.removeItem('globalQuery');
     /* LLENAR INFORMACION DE MISION */
     /* REGION: rescatar value por su id */
     let mision = document.getElementById('mision-info');

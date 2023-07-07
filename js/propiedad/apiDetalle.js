@@ -135,7 +135,7 @@ export default async function apiDetalleCall(id, statusId = 1, companyId) {
                 </div>
             `;
             document.getElementById('realtorName').innerHTML = `
-                <h2>${realtorInfo.name} ${realtorInfo.lastName}</h2>
+                <h2>${realtorInfo.name} ${realtorInfo.lastName != null ? realtorInfo.lastName : ''}</h2>
             `;
             document.getElementById('realtorEmail').innerHTML = `
                 <p style="font-size: 15px;">${realtorInfo.mail}</p>
