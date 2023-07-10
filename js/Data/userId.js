@@ -1,7 +1,7 @@
 export const PropertyData = {CodigoUsuarioMaestro: 0, companyId: 1, realtorId:0};
 
 
-export const limitDataApi = { limit:10 };
+export const limitDataApi = { limit:6 };
 
 
 export const RealtorSendEmailData = {
@@ -66,4 +66,29 @@ export const servicesInformation = {
         collapse:false,
     },
 ]
+}
+
+export const FooterInformation = {
+    address: 'data-RentalProp Spa Apoquindo 6410 Of.605, Las condes',
+    phone:'+56 9 5046 9097',
+    email:'Contacto@rentalprop.cl',
+    socials:[
+        {
+            id: 1,
+            href:'#',
+            icon:'<span class="icon-facebook  text-white"></span>'
+        },{
+            id: 2,
+            href:'#',
+            icon:'<span class="icon-instagram text-white"></span>'
+        },{
+            id: 3,
+            href:'#',
+            icon:'<span class="icon-twitter   text-white"></span>'
+        },{
+            id: 4,
+            href:'#',
+            icon:'<span class="icon-linkedin  text-white"></span>'
+        },
+    ]
 }
