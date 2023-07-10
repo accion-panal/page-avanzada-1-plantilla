@@ -57,6 +57,11 @@ export default async function apiDetalleCall(id, statusId = 1, companyId) {
                 padding: '5rem',
                 rewind: true,
                 autoplay: 'play',
+                breakpoints: {
+                    1399: {
+                        padding: '0rem',
+                    }
+                  }
             });
 
             splide.mount();
