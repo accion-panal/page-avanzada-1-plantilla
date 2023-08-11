@@ -224,18 +224,29 @@
 				</div>
 			</div>
 			<div class="row " style="padding-right: 12%;padding-left: 14%;">
-				<div class="col-lg-6" style="padding-top: 20px ;" id="total-prop">
-					Paginas encontradas 321
+				<div class="col-lg-3" style="padding-top: 20px ;" id="total-prop">
+					<span>Buscando Propiedades...</span>
 				</div>
 				<div class="col-lg-6 text-center ">
 					<div class="row align-items-center" style="padding-top: 10px; ">
 						<div class="col-4 text-end">Orden por:</div>
 						<div class="col-8 text-center">
 							<select class="form-select" aria-label="Default select example" id="FilterPrice">
-								<option selected>Precio mayor a menor</option>
-								<option value="1">Precio menor a mayor</option>
-	
-				
+								<option disabled selected>Seleccione una opción</option>
+								<option value="MenorMayor">Precio de menor a mayor</option>
+								<option value="MayorMenor">Precio de mayor a menor</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 text-center ">
+					<div class="row align-items-center" style="padding-top: 10px; ">
+						<div class="col-4 text-end">Cant. Propiedades:</div>
+						<div class="col-8 text-center">
+							<select class="form-select" aria-label="Default select example" id="FilterLimit">
+								<option value="3">3</option>
+								<option value="6" selected>6</option>
+								<option value="9">9</option>
 							</select>
 						</div>
 					</div>
