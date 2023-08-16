@@ -10543,15 +10543,19 @@ nav[aria-label="breadcrumb"] li:before {
 
 .text-transform{
   display: -webkit-box !important;
-  -webkit-line-clamp: 1;
+  /* -webkit-line-clamp: 1; */
   -webkit-box-orient: vertical;
   overflow: hidden;
   transform: translateY(2%);
   transition: transform 8.8s ease-in;
+  height: 2.375rem;
+  transition: height 1s ease  !important;
+
 }
 
 .text-transform:hover{
   display: block !important;
+  height: 21.875rem;
 }
 
 .text-title-transform{
