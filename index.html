@@ -157,12 +157,12 @@
 							</select>
 						</div>
 						<div class="col-lg-6 p-1">
-							<select class="form-select bornone" id="region" aria-label="Default select example">
+							<select class="form-select bornone" id="regionTextId" aria-label="Default select example">
 								<option value="0" selected>Region</option>
 							</select>
 						</div>
 						<div class="col-lg-6 p-1">
-							<select class="form-select  bornone" id="commune" aria-label="Default select example">
+							<select class="form-select  bornone" id="communeTextId" aria-label="Default select example">
 								<option value="" selected>Comuna</option>	
 							</select>
 						</div>
@@ -517,18 +517,29 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script type="module" src="js/prop_destacada.js"></script>
-	<script type="module" src="js/count-cant-prop.js"></script>
-	<script type="module" src="js/utils/pruebasFiltro.js"></script>
-	<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script> -->
-	<!-- <script type="module" src="js/utils/filterOnSubmit.js"></script> -->
-	<script type="module" src="js/utils/getSelects.js"></script>
-	<script type="module" src="js/prop_searchId.js"></script>
-	<script type="module" src="js/Data/FooterInfo.js"></script>
+		<!-- Axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		
+		<!-- <script type="module" src="js/count-cant-prop.js"></script> -->
+		<!-- <script type="module" src="js/utils/pruebasFiltro.js"></script> -->
+		<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script> -->
+		<!-- <script type="module" src="js/utils/filterOnSubmit.js"></script> -->
+	
+	
+	
 
+		<!-- Api - Propiedades Destacada-->
+		<script type="module" src="js/pages/prop_destacada.js"></script>
 
+		<!-- Filtro buscar por ID -->
+		<script type="module" src="js/pages/prop_searchId.js"></script>
 
+		<!-- Filtros hacia propiedades -->
+		<script type="module" src="js/utils/getSelects.js"></script>
+		<script type="module" src="js/utils/filterIndex.js"></script>
+
+		<!-- Data -->
+		<script type="module" src="js/Data/FooterInfo.js"></script>
 
   </body>
   </html>

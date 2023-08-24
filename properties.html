@@ -1,6 +1,6 @@
-
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
-	
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,11 +20,18 @@
 	<link rel="stylesheet" href="css/tiny-slider.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 	<script src="https://kit.fontawesome.com/e280fd1d3f.js" crossorigin="anonymous"></script>
 	<title>avanzada 1</title>
+
+	<!-- MAPBOX CSS -->
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+	<!--FIN MAPBOX CSS -->
 </head>
+
 <body>
 
 	<div class="site-mobile-menu site-navbar-target">
@@ -36,7 +43,7 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-<!-----------------------------------Navegador---------------------------------------->
+	<!-----------------------------------Navegador---------------------------------------->
 
 	<nav class="site-nav ">
 		<div class="container ">
@@ -56,7 +63,9 @@
 
 					</ul>
 
-					<a href="#" class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
+					<a href="#"
+						class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+						data-toggle="collapse" data-target="#main-navbar">
 						<span></span>
 					</a>
 
@@ -69,33 +78,38 @@
 
 
 
-<!--                                       Filtro      style=" box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;"-->
+	<!--                                       Filtro      style=" box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;"-->
 
-	<div class="section " style="margin-top: 100px;"><!-- style="padding-bottom: 0;margin-top: 100px;margin-left: 100px;margin-right: 100px;;" -->
-		<div class="container  p-lg-5 " style="padding-top: 0 !important;padding-bottom: 0 !important;box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;">
-			<div class="row m-lg-5 " >
-				<div class="col-lg-2 text-center p-2" >
+	<div class="section " style="margin-top: 100px;">
+		<!-- style="padding-bottom: 0;margin-top: 100px;margin-left: 100px;margin-right: 100px;;" -->
+		<div class="container  p-lg-5 "
+			style="padding-top: 0 !important;padding-bottom: 0 !important;box-shadow:  0px 10px 13px -7px #000000, 0px -10px 13px -7px #000000;">
+			<div class="row m-lg-5 ">
+				<div class="col-lg-2 text-center p-2">
 					<div class="section p-5 mt-4 " style="border-right: 1px solid black;" id="operationTypeRadio">
 						<div class="form-check mb-4">
-							<input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" id="operationType-venta" value="venta">
+							<input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+								id="operationType-venta" value="venta">
 							<label class="form-check-label " for="flexRadioDefault1">
-							Venta
+								Venta
 							</label>
 						</div>
 						<div class="form-check mb-4">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  id="operationType-arriendo" value="arriendo">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+								id="operationType-arriendo" value="arriendo">
 							<label class="form-check-label" for="flexRadioDefault2">
-							Arriendo
+								Arriendo
 							</label>
 						</div>
 						<div class="form-check mb-4">
-							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"  id="operationType-arriendo-temp" value="arriendo_temporal">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3"
+								id="operationType-arriendo-temp" value="arriendo_temporal">
 							<label class="form-check-label" for="flexRadioDefault3">
-							Arriendo temporal
+								Arriendo temporal
 							</label>
 						</div>
 					</div>
-	  			</div>
+				</div>
 				<div class="col-lg-8 ">
 
 					<div class="row p-5 text-center ">
@@ -115,7 +129,7 @@
 						</div>
 						<div class="col-lg-6 p-1">
 							<select class="form-select  bornone" id="communeTextId" aria-label="Default select example">
-								<option value="" selected>Comuna</option>	
+								<option value="" selected>Comuna</option>
 							</select>
 						</div>
 
@@ -147,7 +161,7 @@
 							</select>
 						</div>
 
-						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+						<div class="col-lg-6 p-1" style="font-size: 1rem; ">
 							<div class="row text-start  p-2">
 								<div class="col-6 " style="padding-left: 1rem;">
 									<div class="row bornone" style="margin-right: 5px;">
@@ -163,38 +177,42 @@
 										<label class="form-check-label" for="inlineRadio1">UF</label>
 									</div>
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="CLP">
+										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+											value="CLP">
 										<label class="form-check-label" for="inlineRadio2">CLP</label>
 									</div>
 								</div>
 							</div>
-						
+
 						</div>
-						<div class="col-lg-6 p-1"  style="font-size: 1rem; ">
+						<div class="col-lg-6 p-1" style="font-size: 1rem; ">
 							<div class="row text-start">
-								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
-									<div class="row bornone" style="margin-right: 5px;" >
+								<div class="col-lg-6 " style="padding-left: 1.5rem;">
+									<div class="row bornone" style="margin-right: 5px;">
 										<div class="col-6">
-											<input type="number" class=" text-start" style="width: 100px;border: none;" min="0" pattern="^[0-9]+" name="desde" id="min_price" placeholder="Desde">
+											<input type="number" class=" text-start" style="width: 100px;border: none;" min="0"
+												pattern="^[0-9]+" name="desde" id="min_price" placeholder="Desde">
 										</div>
 									</div>
-								
+
 								</div>
-								<div class="col-lg-6 " style="padding-left: 1.5rem;" >
-									<div class="row bornone" style="margin-right: 5px;" >
+								<div class="col-lg-6 " style="padding-left: 1.5rem;">
+									<div class="row bornone" style="margin-right: 5px;">
 										<div class="col-6">
-											<input type="number" class="text-center" style="width: 100px;border: none" min="0" pattern="^[0-9]+" name="hasta" id="max_price" placeholder="Hasta">	
+											<input type="number" class="text-center" style="width: 100px;border: none" min="0"
+												pattern="^[0-9]+" name="hasta" id="max_price" placeholder="Hasta">
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-	  			</div>
-				<div class="col-lg-2 text-center p-lg-5  pt-5 boton-media" >
-					<button type="button" class="btn btn-rounded btn-circle" id="buscar2" style="background-color:#000;color:#fff;">
+				</div>
+				<div class="col-lg-2 text-center p-lg-5  pt-5 boton-media">
+					<button type="button" class="btn btn-rounded btn-circle" id="buscar2"
+						style="background-color:#000;color:#fff;">
 						Buscar
-					  </button>
+					</button>
 					<!-- <p><a href="properties.html" target="_blank" class="btn btn-primary text-white py-3 px-4 "  style="background-color: #333;">Buscar</a></p> -->
 				</div>
 			</div>
@@ -202,9 +220,9 @@
 	</div>
 
 
-<!--                                       Botones Grilla - Carta - Mapa             -->
+	<!--                                       Botones Grilla - Carta - Mapa             -->
 
-	<div class="section"  >
+	<div class="section">
 		<div class="row align-items-center py-1 ">
 			<div class="col-12 float-start " style="padding-left: 15%; font-weight: bold;">
 				<div class="row ">
@@ -215,12 +233,25 @@
 
 			</div>
 			<div class="col-lg-12 grilla-custom " style="margin-top: 20px ;  padding-right: 14%; padding-bottom: 1%;">
-				<div class="custom-pagination ">
-					<a href="properties.html"class="active "><img src="images/grilla-icono.svg" alt=""></a>
-					<a href="properties-card.html" ><img src="images/carta-icono.svg" alt=""></a>	
-					<a href="properties-map.html" ><img src="images/mapa-icono.svg" alt=""></a>
+				<ul class="nav nav-pills mb-3 custom-pagination" id="pills-tab" role="tablist" style="justify-content: end; gap: 5px;">
 
-				</div>
+					<li class="nav-item" role="presentation">
+						<a class="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+							type="button" role="tab" aria-controls="pills-home" aria-selected="true"><img src="images/grilla-icono.svg" alt=""></a>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<a class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+							type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><img src="images/carta-icono.svg" alt=""></a>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<a class="" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+							type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><img src="images/mapa-icono.svg" alt=""></a>
+					</li>
+					
+				</ul>
+
 			</div>
 			<div class="row " style="padding-right: 12%;padding-left: 14%;">
 				<div class="col-lg-3" style="padding-top: 20px ;" id="total-prop">
@@ -253,189 +284,162 @@
 
 			</div>
 
-
 		</div>
 	</div>
 
 
 
 
-<!--Propiedades -->
+	<!--Propiedades -->
 
-	<div class="section section-properties" style="padding-top: 0;">
-		<div class="container">
-			<div class="row " style="padding-left: 10%;padding-right: 10%; justify-content: center;" id="container-propiedad">
-				<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
-				<!-- <div class="col-xs-12 col-md-6 col-lg-4">
-					<div class="property-item mb-30">
-								<div class="border" style="background-image: url('images/img_1.jpg')">
-									<div class="shadow-properties m-3">
-										<a href="property-single.html" class="img">
-											<div class="property-content text-center" >
-												<div class="card-body">
-													<p class="">Puerto Montt</p>
-													<h3 class="card-title">TERRAMAR</h3>
-													<hr width="100%" size="5"  ></hr>
-													<div class="row">
-													<div class="col-4">
-														<div class="row">
-															<div class="col-12"><h5>Hab</h5></div>
-															<div class="col-12">3</div>
-														</div>
-													</div>
-													<div class="col-4">
-														<div class="row">
-															<div class="col-12"><h5>UF</h5></div>
-															<div class="col-12">3650</div>
-														</div>
-													</div>
-													<div class="col-4">
-														<div class="row">
-															<div class="col-12"><h5>M2</h5></div>
-															<div class="col-12">77</div>
-														</div>
-													</div>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-
-					</div> 
-				</div> -->
-			</div>
-			<!-- <div class="row align-items-center py-5">
-				<div class="col-lg-12 text-center">
-					<div class="custom-pagination">
-						<a href="#" class="active"></a>
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
-						<a href="#"></a>
+		<div class="section section-properties" style="padding-top: 0;">
+			<div class="container">
+				
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div class="row p-2 p-md-5" style="padding-left: 10%;padding-right: 10%; justify-content: center;" id="container-propiedad">
+							
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+						<div class="row p-2 p-md-5" style="justify-content: center;" id="container-propiedad-list">
+							
+						</div>
+					</div>
+					<div class="tab-pane fade initialMap active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<div class="row p-2 p-md-5" style="justify-content: center;" id="div-map-section">
+							<div id="map"></div>
+						</div>
 					</div>
 				</div>
-			</div> -->
 
-			<div id="pagination-col" class="row align-items-center py-5">
-			
+				<div id="pagination-col" class="row align-items-center py-5"></div>
+
 			</div>
 		</div>
-	</div>
+
+
+	
+		<!---------------------Footer--------------------------->
+
+		<div class="site-footer"><!--style="background-color:#3c3b3b ;"-->
+			<div class="container">
+
+				<div class="row ">
 
 
 
-<!---------------------Footer--------------------------->
+					<div id="contact-footer" class="col-lg-3">
 
-<div class="site-footer" ><!--style="background-color:#3c3b3b ;"-->
-	<div class="container">
-		
-		<div class="row ">
-
-			
-
-			<div id="contact-footer" class="col-lg-3">
-
-					<div class="widget">
-						<h3 class="p-1 pt-2">Contacto</h3>
-						<div class="row pt-2">
-							<div class="col-12">
-								<p class="">
-									<i class="fa fa-map-marker fa-lg  p-1"></i>
-									RentalProp Spa Apoquindo 
-									6410 Of.605, Las condes
-								</p>
+						<div class="widget">
+							<h3 class="p-1 pt-2">Contacto</h3>
+							<div class="row pt-2">
+								<div class="col-12">
+									<p class="">
+										<i class="fa fa-map-marker fa-lg  p-1"></i>
+										RentalProp Spa Apoquindo
+										6410 Of.605, Las condes
+									</p>
+								</div>
+								<div class="col-12">
+									<p class="">
+										<i class="fa fa-phone fa-lg  p-1"></i>
+										+56 9 5046 9097
+									</p>
+								</div>
+								<div class="col-12">
+									<p class="">
+										<i class="fa fa-envelope fa-lg  p-1"></i>
+										Contacto@rentalprop.cl
+									</p>
+								</div>
 							</div>
-							<div class="col-12">
-								<p class="">
-									<i class="fa fa-phone fa-lg  p-1"></i>
-									+56 9 5046 9097
-								</p>
-							</div>
-							<div class="col-12">
-								<p class="">
-									<i class="fa fa-envelope fa-lg  p-1"></i>
-									Contacto@rentalprop.cl
-								</p>
-							</div>
-						</div>
-					</div> <!-- /.widget -->
+						</div> <!-- /.widget -->
 
 
-			</div> <!-- /.col-lg-4 -->
-			<div class="col-lg-3">
-				<div class="widget">
-					<ul class="list-unstyled float-start links p-2">
-						<h3 class="p-1">Menú</h3>
-						<li style="text-decoration: none;"><a class="p-1" href="about.html">NOSOTROS</a></li>
-						<li style="text-decoration: none;"><a class="p-1" href="properties.html">PROPIEDADES</a></li>
-						<li style="text-decoration: none;"><a class="p-1" href="services.html">SERVICIOS</a></li>
-						<li style="text-decoration: none;"><a class="p-1" href="">PUBLICA GRATIS</a></li>
-						<li style="text-decoration: none;"><a class="p-1" href="intranet.html">INTRANET</a></li>
+					</div> <!-- /.col-lg-4 -->
+					<div class="col-lg-3">
+						<div class="widget">
+							<ul class="list-unstyled float-start links p-2">
+								<h3 class="p-1">Menú</h3>
+								<li style="text-decoration: none;"><a class="p-1" href="about.html">NOSOTROS</a></li>
+								<li style="text-decoration: none;"><a class="p-1" href="properties.html">PROPIEDADES</a></li>
+								<li style="text-decoration: none;"><a class="p-1" href="services.html">SERVICIOS</a></li>
+								<li style="text-decoration: none;"><a class="p-1" href="">PUBLICA GRATIS</a></li>
+								<li style="text-decoration: none;"><a class="p-1" href="intranet.html">INTRANET</a></li>
 
-					</ul>
-				</div> <!-- /.widget -->
-			</div>
-			<div class="col-lg-3 pt-2">
-				<h3 style="font-size: 20px;
+							</ul>
+						</div> <!-- /.widget -->
+					</div>
+					<div class="col-lg-3 pt-2">
+						<h3 style="font-size: 20px;
 				font-weight: 700;
 				text-transform: uppercase;">Descubre</h3>
-				<ul class="list-unstyled social  " id="social-footer">
-					<li><a href="#"><span class="icon-facebook  text-white"></span></a></li>
-					<li><a href="#"><span class="icon-instagram text-white"></span></a></li>
-					<li><a href="#"><span class="icon-twitter   text-white"></span></a></li>
-					<li><a href="#"><span class="icon-linkedin  text-white"></span></a></li>
+						<ul class="list-unstyled social  " id="social-footer">
+							<li><a href="#"><span class="icon-facebook  text-white"></span></a></li>
+							<li><a href="#"><span class="icon-instagram text-white"></span></a></li>
+							<li><a href="#"><span class="icon-twitter   text-white"></span></a></li>
+							<li><a href="#"><span class="icon-linkedin  text-white"></span></a></li>
 
-				</ul>
+						</ul>
+					</div>
+					<div class="col-lg-3">
+						<div class="widget ">
+
+							<!-- LOGO -->
+							<h1 class="heading" data-aos="fade-up" style="font-size: 80px; font-weight: bold;">LOGO</h1>
+
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-4 -->
+				</div> <!-- /.row -->
+				<hr width="100%" size="5">
+				</hr>
+
+				<div class="row ">
+					<div class="col-12 mt-2" style="text-align: right;">
+
+						<p> &copy;
+							<script>;</script>
+							TODOS LOS DERECHOS RESERVADOS.
+						</p>
+
+					</div>
+
+				</div>
+			</div> <!-- /.container -->
+		</div> <!-- /.site-footer -->
+
+		<!-- Preloader -->
+		<div id="overlayer"></div>
+		<div class="loader">
+			<div class="spinner-border" role="status">
+				<span class="visually-hidden">Loading...</span>
 			</div>
-			<div class="col-lg-3">
-				<div class="widget ">
-
-									<!-- LOGO -->
-					<h1 class="heading" data-aos="fade-up" style="font-size: 80px; font-weight: bold;">LOGO</h1>
-
-				</div> <!-- /.widget -->
-			</div> <!-- /.col-lg-4 -->
-		</div> <!-- /.row -->
-		<hr width="100%" size="5"  ></hr>
-
-		<div class="row ">
-			<div class="col-12 mt-2" style="text-align: right;">
-
-				<p> &copy;<script>;</script> 
-				TODOS LOS DERECHOS RESERVADOS.  
-				</p>
-
-			</div>
-
-	</div>
-  </div> <!-- /.container -->
-</div> <!-- /.site-footer -->
-
-    <!-- Preloader -->
-    <div id="overlayer"></div>
-    <div class="loader">
-    	<div class="spinner-border" role="status">
-    		<span class="visually-hidden">Loading...</span>
-    	</div>
-    </div>
+		</div>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/tiny-slider.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/navbar.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/tabs.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script type="module" src="js/utils/getSelects.js"></script>
-	<script type="module" src="js/utils/filterOnSearch.js"></script>
-	<script type="module" src="js/utils/pagination.js"></script>
-	<!-- <script type="module" src="js/utils/filterOnSubmitIndex.js"></script>
-	<script type="module" src="js/utils/filterOnSubmit.js"></script> -->
-	<script type="module" src="js/index.js"></script>
-	<script type="module" src="js/Data/FooterInfo.js"></script>
+		<!-- Axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-  </body>
-  </html>
+		<!-- Pages -->
+		<script type="module" src="js/pages/index.js"></script>
+
+		<!-- Utils -->
+		<script type="module" src="js/utils/filterOnSearch.js"></script>
+		<script type="module" src="js/utils/getSelects.js"></script>
+		<script type="module" src="js/utils/limitProp.js"></script>
+		
+		<!-- Data -->
+		<script type="module" src="js/Data/FooterInfo.js"></script>		
+
+</body>
+
+</html>

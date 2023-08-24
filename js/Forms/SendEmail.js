@@ -13,6 +13,10 @@ formEmail.addEventListener('submit', function (e) {
 
     let realtorMail = RealtorSendEmailData.sendEmail;
 
+    if( firstName.value === '' || email.value === '' || subject.value === '' || phone.value === '' || message.value === ''){
+        return;
+    }
+
     fetch(`https://formsubmit.co/ajax/${realtorMail}`, {
         method: "POST",
         headers: {
