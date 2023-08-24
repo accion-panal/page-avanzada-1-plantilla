@@ -1,5 +1,5 @@
-import apiDetalleCall from "./propiedad/apiDetalle.js";
-import { PropertyData } from "./Data/userId.js";
+import apiDetalleCall from "../propiedad/apiDetalle.js";
+import { PropertyData } from "../Data/userId.js";
 
 const formId = document.getElementById('form-searchId');
 

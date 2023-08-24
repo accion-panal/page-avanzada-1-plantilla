@@ -88,5 +88,3 @@ document.addEventListener("DOMContentLoaded", function () {
 	// splideList.mount();
 	splide.mount();
 });
-
-apiDestCall()
