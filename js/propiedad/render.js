@@ -13,7 +13,9 @@ let defaultLimit = limitDataApi.limit;
 function changeUrlImage(data) {
   return data.map(item => {
     // Reemplazar "\\" por "//" en la propiedad "image"
-    item.image = item.image.replace(/\\/g, "//");
+    if(item.image){
+      item.image = item.image.replace(/\\/g, "//");
+    }
     return item;
   });
 }
@@ -68,6 +70,20 @@ function setContainerLoading(isLoading) {
       document.getElementById("container-propiedad-list").innerHTML = spinner
     }
   }
+}
+
+function validateImage(image){
+  if(image){
+    if(image.endsWith('.jpg') || image.endsWith('.png') || image.endsWith('.jpeg')){
+      return `style="background-image: url('${image}'); background-size: cover;"`;
+    }
+    return `style="background-image: url('https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg'); background-size: cover;"`;
+  }
+  else{
+    return `style="background-image: url('https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg'); background-size: cover;"`;
+  }
+
+  //style="background-image: url('${data.image.endsWith('.jpg') ? `${data.image}` : `https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg`}');
 }
 
 
@@ -191,9 +207,9 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
       document.getElementById("container-propiedad").innerHTML = data.map(data => `
                 <div class="col-xs-12 col-md-6 col-lg-4">
                     <div class="property-item mb-30">
-                        <div class="border" style="background-image: url('${data.image.endsWith('.jpg') ? `${data.image}` : `https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg`}'); background-size: cover;">
+                        <div class="border" ${validateImage(data.image)}>
                             <div class="shadow-properties m-3">
-                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" class="img">
+                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" class="img" target="_blank">
                                     <div class="property-content text-center" >
                                         <div class="card-body">
                                             <p class="">${data.id}</p>
@@ -238,10 +254,10 @@ export default async function renderCall(QueryParams = undefined, NumberPaginati
                 <div class="col-12" style="padding-left: 10%; padding-right: 10%;">
                     <div class="card mb-3 text-center carta " style="max-width: 100%;">
                         <div class="row no-gutters ">
-                            <div class="col-md-4" style="background-image: url('${data.image.endsWith('.jpg') ? `${data.image}` : `https://res.cloudinary.com/dbrhjc4o5/image/upload/v1681933697/unne-media/errors/not-found-img_pp5xj7.jpg`}'); background-size: cover;" >
+                            <div class="col-md-4" ${validateImage(data.image)} >
                             </div>
                             <div class="col-md-8 px-md-5" >
-                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}">
+                                <a href="/property-single.html?${data.id}&statusId=${1}&companyId=${companyId}" target="_blank">
                                     <div class="card-body " >
                                         <p class="">${data.id}</p>
                                         <p class=" "> <i class="fa fa-map-marker fa-lg  p-1"></i> ${data.address != null && data.address != undefined && data.address != "" ? data.address : "No registra dirección"},${data.commune != null & data.commune != undefined && data.commune != "" ? data.commune : "No registra comuna"}</p>
